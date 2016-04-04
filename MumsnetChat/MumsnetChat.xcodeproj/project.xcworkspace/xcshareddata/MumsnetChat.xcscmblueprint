@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9ABF45F2FD832682D5D8E8537939D352175F19C2" : 0,
+    "DB328BEFE7E350C4A0DAD13097C3BAA0CAB7F433" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8A45F1B6-CC0E-409B-9DFD-EB00E12F6F85",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9ABF45F2FD832682D5D8E8537939D352175F19C2" : "..\/..\/..\/TalkApp",
+    "DB328BEFE7E350C4A0DAD13097C3BAA0CAB7F433" : "..\/..\/..\/TalkFramework"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MumsnetChat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MumsnetChat.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mumsnet\/ios-talk-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9ABF45F2FD832682D5D8E8537939D352175F19C2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mumsnet\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DB328BEFE7E350C4A0DAD13097C3BAA0CAB7F433"
+    }
+  ]
+}
