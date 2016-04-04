@@ -55,7 +55,7 @@ class ChatDetailViewController: ChatViewController {
         
         self.chat = chat
         self.messageSender = ChatMessageSender(chat: chat)
-        self.dataSource = ChatDataSource(delegate: self, chat: chat)
+        self.dataSource = ChatDataSource(delegate: self, chat: chat, existingMessages: chat.messages)
     }
     
     override func createChatInputView() -> UIView {

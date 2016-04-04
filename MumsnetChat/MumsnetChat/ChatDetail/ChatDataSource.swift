@@ -16,7 +16,7 @@ class ChatDataSource: ChatDataSourceProtocol {
     
     // Called whenever the data source is updated
     weak var delegate: ChatDataSourceDelegateProtocol?
-    var slidingWindow: SlidingDataSource<MumsnetChatMessage>
+    var slidingWindow: SlidingDataSource<ChatItemProtocol>!
     var chat:MumsnetChat
     let preferredMaxWindowSize = 500
 
@@ -36,11 +36,11 @@ class ChatDataSource: ChatDataSourceProtocol {
         return sender
     }()
     
-    init(delegate:ChatDataSourceDelegateProtocol, chat:MumsnetChat) {
+    init(delegate:ChatDataSourceDelegateProtocol, chat:MumsnetChat, existingMessages:[ChatItemProtocol]) {
         
         self.delegate = delegate
         self.chat = chat
-        self.slidingWindow = SlidingDataSource(items: chat.messages, pageSize: APIManager.Constants.ChatPageDefaultSize)
+        self.slidingWindow = SlidingDataSource(items: existingMessages, pageSize: APIManager.Constants.ChatPageDefaultSize)
 
     }
     
@@ -91,7 +91,7 @@ class ChatDataSource: ChatDataSourceProtocol {
         let uiMessage = TextMessageModel(messageModel: chatMessage, text: text)
         
         self.messageSender.sendMessage(uiMessage)
-        self.slidingWindow.insertItem(chatMessage, position: .Bottom)
+        self.slidingWindow.insertItem(uiMessage, position: .Bottom)
         self.delegate?.chatDataSourceDidUpdate(self)
         
     }
@@ -101,12 +101,21 @@ class ChatDataSource: ChatDataSourceProtocol {
     func reloadData() {
         
         // TODO: show loading
-        APIManager.fetchChat(1) { (result:ApiResult<MumsnetChat>) in
+        APIManager.fetchChat(chatID: chat.objectID) { (result:ApiResult<MumsnetChat>) in
             switch result {
                 
             case ApiResult.Success(let chat):
                 self.chat = chat
-                self.slidingWindow = SlidingDataSource.initWithItems(chat.messages, pageSize: 20)
+                
+                let portedMessages = chat.messages.map({ (message:MumsnetChatMessage) -> TextMessageModel in
+                    
+                    let message =  TextMessageModel(messageModel: message, text: message.text ?? "")
+                    message.status = MessageStatus.Success
+                    return message
+                })
+                
+                
+                self.slidingWindow.setItems(portedMessages.map({$0 as ChatItemProtocol}))
                 self.delegate?.chatDataSourceDidUpdate(self)
                 
             case ApiResult.Error(let errorResponse):
