@@ -17,17 +17,22 @@ class ChatDetailViewController: ChatViewController {
     @IBOutlet weak var fromField: UITextField!
     @IBOutlet weak var toField: UITextField!
     
+    // Title labels
+    @IBOutlet weak var topNavTitleLabel: UILabel!
+    @IBOutlet weak var bottomNavTitleLabel: UILabel!
+    
     var chat:MumsnetChat? {
         didSet {
             if let chat = chat {
                 self.messageSender.chat = chat
-                self.dataSource = ChatDataSource(delegate: self, chat: chat, existingMessages: chat.messages)
-                
+                self.dataSource = ChatDataSource(delegate: self, chat: chat)
                 self.chatInputPresenter?.noChatCompletion = nil
+                
             }
         }
     }
     var messageSender = ChatMessageSender()
+    var newMessageCheckTimer = NSTimer()
     
     lazy private var baseMessageHandler: BaseMessageHandler = {
             return BaseMessageHandler(messageSender: self.messageSender)
@@ -56,7 +61,6 @@ class ChatDetailViewController: ChatViewController {
         
         super.viewWillAppear(animated)
         
-        self.dataSource?.refreshData()
 
     }
     
@@ -64,7 +68,18 @@ class ChatDetailViewController: ChatViewController {
         
         super.viewDidAppear(animated)
 
+        self.refreshData()
     }
+    
+    
+    override func viewDidDisappear(animated: Bool) {
+        
+        super.viewDidDisappear(animated)
+        
+        self.newMessageCheckTimer.invalidate()
+
+    }
+
     
     // MARK: - Setup
     
@@ -75,8 +90,17 @@ class ChatDetailViewController: ChatViewController {
             // Setup default username
             self.fromField.text = user.username
         }
+
+        self.setupNavTitles(self.chat)
         
-        if self.chat == nil { // Show new chat
+        if let chat = self.chat {
+           
+//            self.title = chat.otherUserUsernames.first ?? "Invalid User"
+            
+        }
+        else { // Show new chat
+            
+            
             // Set completion for when first message is sent
             self.chatInputPresenter?.noChatCompletion = { (inputBar:ChatInputBar) -> Void in
                 
@@ -86,9 +110,71 @@ class ChatDetailViewController: ChatViewController {
         
         let showNewMessage = (self.chat == nil)
         self.showNewMessageBar(show: showNewMessage, animated: false)
+        
+        // Start timer 
+        self.newMessageCheckTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(ChatDetailViewController.refreshData), userInfo: nil, repeats: true)
+    }
+    
+    
+    func setupNavTitles(chat:MumsnetChat?) {
+        
+        if let chat = chat {
+            // Show chat titles
+            self.topNavTitleLabel.alpha = 1
+            self.topNavTitleLabel.text = chat.otherUserUsernames.first ?? "Invalid Username"
+            
+            var bottomText = ""
+            if let currentUsername = chat.currentUserUsername {
+                bottomText = "From: \(currentUsername)"
+            }
+            self.bottomNavTitleLabel.alpha = 1
+            self.bottomNavTitleLabel.text = bottomText
+            self.title = nil
+            
+        }
+        else {
+            self.topNavTitleLabel.alpha = 0
+            self.bottomNavTitleLabel.alpha = 0
+            self.title = "New Chat"
+        }
+    }
+    
+    func refreshData() {
+        
+        if let chat = self.chat {
+            
+            self.setPlaceholder("Loading messages...")
+            APIManager.fetchChat(chatID: chat.objectID) { (result:ApiResult<MumsnetChat>) in
+                switch result {
+                    
+                case ApiResult.Success(let chat):
+                    self.setPlaceholder(nil)
+                    self.dataSource?.setupWithChat(chat)
+                    
+                case ApiResult.Error(let errorResponse):
+                    print(errorResponse.error)
+                    self.setPlaceholder("Error loading messages!")
+
+                }
+            }
+        }
     }
     
     // MARK: - Misc
+    
+    /**
+     Show placeholder if there is no cells
+     */
+    func setPlaceholder(placeholder:String?) {
+        
+        if placeholder != nil && self.collectionView.numberOfItemsInSection(0) == 0 {
+
+            self.collectionView.showPlaceholder(placeholder ?? "")
+        }
+        else {
+            self.collectionView.hidePlaceholder()
+        }
+    }
     
     func showNewMessageBar(show shouldShow:Bool, animated:Bool) {
         
@@ -99,11 +185,18 @@ class ChatDetailViewController: ChatViewController {
         if self.newUserBarY.constant != newY {
             self.newUserBarY.constant = newY
             self.view.setNeedsUpdateConstraints()
-
+            
             self.newUserBar.superview?.bringSubviewToFront(self.newUserBar)
             
             UIView.animateWithDuration(duration, animations: {
                 self.view.layoutIfNeeded()
+                }, completion: { (completed) in
+                    
+                    if shouldShow {
+                        delay(0.5, closure: {
+                            self.toField.becomeFirstResponder()
+                        })
+                    }
             })
         }
         
@@ -118,8 +211,9 @@ class ChatDetailViewController: ChatViewController {
             if let message = message {
                 APIManager.startChat([fromUser, toUser], message: message, completion: { (result:ApiResult<MumsnetChat>) in
             
+                    self.setPlaceholder(nil)
+
                     switch result {
-                        
                     case ApiResult.Success(let chat):
                         self.chat = chat
                         self.showNewMessageBar(show: false, animated: true)

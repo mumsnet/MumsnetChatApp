@@ -41,15 +41,14 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         
         
-        if UserManager.currentUser() == nil {
-            self.presentLogin(animated: false)
-//            self.view.alpha = 0
-        }
-        else {
+        if let user = UserManager.currentUser() {
+            // Logged in
             self.reloadChats(pageToLoad: 1)
-//            self.view.alpha = 1
+            self.title = user.username
         }
-        
+        else { // Logged out
+            self.presentLogin(animated: false)
+        }
     }
     
     // MARK: - Misc

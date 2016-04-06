@@ -32,12 +32,6 @@ public enum InsertPosition {
 public class SlidingDataSource<Element> {
 
     
-//    public class func initWithItems(items:[Element], pageSize:Int) -> SlidingDataSource {
-//        
-//        let source = SlidingDataSource(items: items, pageSize: pageSize)
-//        return source
-//    }
-    
     public func setItems(items:[Element]) {
         
         self.items = []

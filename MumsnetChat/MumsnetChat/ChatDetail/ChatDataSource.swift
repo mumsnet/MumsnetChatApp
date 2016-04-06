@@ -16,17 +16,11 @@ class ChatDataSource: ChatDataSourceProtocol {
     
     // Called whenever the data source is updated
     weak var delegate: ChatDataSourceDelegateProtocol?
-    var slidingWindow: SlidingDataSource<ChatItemProtocol>!
+    var slidingWindow: SlidingDataSource<ChatItemProtocol>
     var chat:MumsnetChat
     let preferredMaxWindowSize = 500
 
 
-//    var messages:[MumsnetChatMessage] = [] {
-//        
-//        didSet {
-//            self.delegate?.chatDataSourceDidUpdate(self)
-//        }
-//    }
     lazy var messageSender: ChatMessageSender = {
         let sender = ChatMessageSender()
         sender.onMessageChanged = { [weak self] (message) in
@@ -37,11 +31,13 @@ class ChatDataSource: ChatDataSourceProtocol {
         return sender
     }()
     
-    init(delegate:ChatDataSourceDelegateProtocol, chat:MumsnetChat, existingMessages:[ChatItemProtocol]) {
+    init(delegate:ChatDataSourceDelegateProtocol, chat:MumsnetChat) {
         
         self.delegate = delegate
         self.chat = chat
-        self.slidingWindow = SlidingDataSource(items: existingMessages, pageSize: APIManager.Constants.ChatPageDefaultSize)
+        // Hack to fix objc bridging bug
+        let messages = chat.messages.map({$0 as ChatItemProtocol})
+        self.slidingWindow = SlidingDataSource(items: messages, pageSize: APIManager.Constants.ChatPageDefaultSize)
 
     }
     
@@ -99,20 +95,21 @@ class ChatDataSource: ChatDataSourceProtocol {
     
     // MARK: - Load Existing Messages
     
-    func refreshData() {
-        
-        // TODO: show loading
-        APIManager.fetchChat(chatID: chat.objectID) { (result:ApiResult<MumsnetChat>) in
-            switch result {
-                
-            case ApiResult.Success(let chat):
-                self.setupWithChat(chat)
-                
-            case ApiResult.Error(let errorResponse):
-                print(errorResponse.error)
-            }
-        }
-    }
+//    func refreshData() {
+//        
+//        // TODO: show loading
+//        
+//        APIManager.fetchChat(chatID: chat.objectID) { (result:ApiResult<MumsnetChat>) in
+//            switch result {
+//                
+//            case ApiResult.Success(let chat):
+//                self.setupWithChat(chat)
+//                
+//            case ApiResult.Error(let errorResponse):
+//                print(errorResponse.error)
+//            }
+//        }
+//    }
     
     /**
      Setup Chat UI with new Chat
@@ -128,7 +125,7 @@ class ChatDataSource: ChatDataSourceProtocol {
             return message
         })
         
-        
+        // CRASH?
         self.slidingWindow.setItems(portedMessages.map({$0 as ChatItemProtocol}))
         self.delegate?.chatDataSourceDidUpdate(self)
     }

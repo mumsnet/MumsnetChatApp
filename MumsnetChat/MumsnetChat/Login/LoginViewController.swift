@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var buttonSpinner: UIActivityIndicatorView!
+    @IBOutlet weak var crossButton: UIButton!
     
     override func viewDidLoad() {
         
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
         
         self.enableLoginButton(false)
+        self.crossButton.hidden = !UserManager.isLoggedIn()
         
     }
     
@@ -61,6 +63,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func closeLoginVC() {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: - Actions
     
     @IBAction func loginButtonPressed(sender: UIButton) {
@@ -79,17 +86,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
             case ApiResult.Success(_):
                 // Successful login, close
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.closeLoginVC()
                 
             case ApiResult.Error(let errorResponse):
                 print(errorResponse.error)
                 self.errorLabel.text = errorResponse.error.debugDescription ?? ""
             }
         }
-        
-    
     }
     
+    @IBAction func crossButtonPressed(sender: UIButton) {
+        
+        self.closeLoginVC()
+    }
     
     // MARK: - TextField Delegates
     

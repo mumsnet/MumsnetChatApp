@@ -111,7 +111,7 @@ public class BaseMessageCollectionViewCell<BubbleViewType where BubbleViewType:U
         return self.bubbleView.canCalculateSizeInBackground
     }
 
-    public private(set) var bubbleView: BubbleViewType!
+    public /*private(set)*/ var bubbleView: BubbleViewType!
     func createBubbleView() -> BubbleViewType! {
         assert(false, "Override in subclass")
         return nil
@@ -128,20 +128,23 @@ public class BaseMessageCollectionViewCell<BubbleViewType where BubbleViewType:U
     }
 
     public private(set) lazy var tapGestureRecognizer: UITapGestureRecognizer = {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "bubbleTapped:")
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseMessageCollectionViewCell.bubbleTapped(_:)))
         return tapGestureRecognizer
     }()
 
     public private (set) lazy var longPressGestureRecognizer: UILongPressGestureRecognizer = {
-        let longpressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "bubbleLongPressed:")
+        let longpressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(BaseMessageCollectionViewCell.bubbleLongPressed(_:)))
         longpressGestureRecognizer.delegate = self
         return longpressGestureRecognizer
     }()
 
     private func commonInit() {
         self.bubbleView = self.createBubbleView()
-        self.bubbleView.addGestureRecognizer(self.tapGestureRecognizer)
-        self.bubbleView.addGestureRecognizer(self.longPressGestureRecognizer)
+//        self.bubbleView.addGestureRecognizer(self.tapGestureRecognizer)
+//        self.bubbleView.addGestureRecognizer(self.longPressGestureRecognizer)
+        
+        print(self)
+        print(self.contentView)
         self.contentView.addSubview(self.bubbleView)
         self.contentView.addSubview(self.failedButton)
         self.contentView.exclusiveTouch = true

@@ -18,7 +18,7 @@ class ChatListCell: UITableViewCell {
     
     func setupWithChat(chat:MumsnetChat) {
         
-        self.fromToLabel.text = "From: \(chat.currentUserUsername ?? "")  |  To: \(chat.otherUserUsernames.first ?? "")"
+        self.fromToLabel.text = "\(chat.currentUserUsername ?? "")  ->  \(chat.otherUserUsernames.first ?? "")"
         
         var dateText = ""
         if let message = chat.lastMessage {
