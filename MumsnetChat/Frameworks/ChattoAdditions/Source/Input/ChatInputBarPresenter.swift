@@ -24,9 +24,13 @@
 
 import UIKit
 
+
 @objc public class ChatInputBarPresenter: NSObject {
+    public typealias NoChatCompletion = ((inputBar:ChatInputBar) -> Void)
+
     let chatInputView: ChatInputBar
     let chatInputItems: [ChatInputItemProtocol]
+    public var noChatCompletion:((inputBar:ChatInputBar) -> Void)?
 
     public init(chatInputView: ChatInputBar, chatInputItems: [ChatInputItemProtocol]) {
         self.chatInputView = chatInputView
@@ -71,6 +75,8 @@ import UIKit
 }
 
 extension ChatInputBarPresenter: ChatInputBarDelegate {
+    
+    
     public func inputBarDidEndEditing(inputBar: ChatInputBar) {
         self.focusedItem = nil
         self.chatInputView.textView.inputView = nil
@@ -85,10 +91,16 @@ extension ChatInputBarPresenter: ChatInputBarDelegate {
     }
 
     func inputBarSendButtonPressed(inputBar: ChatInputBar) {
-        if let focusedItem = self.focusedItem {
-            focusedItem.handleInput(inputBar.inputText)
-        } else if let keyboardItem = self.firstKeyboardInputItem() {
-            keyboardItem.handleInput(inputBar.inputText)
+        
+        if let completion = self.noChatCompletion {
+            completion(inputBar: inputBar)
+        }
+        else {
+            if let focusedItem = self.focusedItem {
+                focusedItem.handleInput(inputBar.inputText)
+            } else if let keyboardItem = self.firstKeyboardInputItem() {
+                keyboardItem.handleInput(inputBar.inputText)
+            }
         }
     }
 

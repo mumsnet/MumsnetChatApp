@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // SETUP API
         AppDelegate.setUpAPIConstants()
         
+//        if UserManager.currentUser() == nil {
+//            if let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
+//                self.presentViewController(loginVC, animated: false, completion: nil)
+//            }
+//        }
+        
         return true
     }
     
@@ -35,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MumsnetAPIAccessToken.ClientSecret = "4896b155dc3915d5b156cbbd10faff25affeaa4a6cb1f68bc03de25c14060bc8"
         
         
-        // TEST TOKEN
-        UserManager.setCurrentToken("958bb0a3973efa60b3041962faaaabc899b0896dcd02eb3e4545948a021dcf7d")
+//        // TEST TOKEN
+//        UserManager.setCurrentToken("958bb0a3973efa60b3041962faaaabc899b0896dcd02eb3e4545948a021dcf7d")
     }
 
     func applicationWillResignActive(application: UIApplication) {

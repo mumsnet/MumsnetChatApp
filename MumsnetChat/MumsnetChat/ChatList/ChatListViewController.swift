@@ -17,6 +17,9 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         didSet {
             self.tableView.reloadData()
+            
+            let placeholder: String? = self.chats.count == 0 ? "No chats yet." : nil
+            self.showPlaceholder(placeholder)
         }
     }
     
@@ -30,7 +33,42 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.addSubview(self.pullToRefresh)
         self.tableView.sendSubviewToBack(self.pullToRefresh)
 
-        self.reloadChats(pageToLoad: 1)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        
+        if UserManager.currentUser() == nil {
+            self.presentLogin(animated: false)
+//            self.view.alpha = 0
+        }
+        else {
+            self.reloadChats(pageToLoad: 1)
+//            self.view.alpha = 1
+        }
+        
+    }
+    
+    // MARK: - Misc
+    
+    func showPlaceholder(placeholder:String?) {
+        
+        if let placeholder = placeholder {
+            self.tableView.showPlaceholder(placeholder)
+        }
+        else { // Hide
+            self.tableView.hidePlaceholder()
+        }
+    }
+    
+    func presentLogin(animated isAnimated:Bool) {
+        
+        if let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
+            self.presentViewController(loginVC, animated: isAnimated, completion: nil)
+        }
     }
     
     func refreshTriggered() {
@@ -56,6 +94,20 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    // MARK: - Actions
+    
+    @IBAction func switchUserButtonPressed(sender: UIButton) {
+    
+        self.presentLogin(animated: true)
+    
+    }
+    
+    @IBAction func newChatButtonPressed(sender: UIButton) {
+    
+        self.showChatVC(existingChat: nil)
+    
+    }
+    
     // MARK: - TableView Delegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,14 +129,23 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        // TODO: open Chat Detail
+        let chat = self.chats[indexPath.row]
+        self.showChatVC(existingChat: chat)
+    }
+    
+    func showChatVC(existingChat chat:MumsnetChat?) {
+        
         let chatDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ChatDetailViewController") as! ChatDetailViewController
         
-        let chat = self.chats[indexPath.row]
-        chatDetailVC.setup(chat)
+        chatDetailVC.chat = chat
         
         self.navigationController?.pushViewController(chatDetailVC, animated: true)
+
     }
 }
+
+
+
+
 
 

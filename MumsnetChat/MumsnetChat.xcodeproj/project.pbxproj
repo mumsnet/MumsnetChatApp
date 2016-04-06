@@ -99,6 +99,8 @@
 		D3652C031CB2C3B5004F3A06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3652BB61CB2C3B5004F3A06 /* User.swift */; };
 		D3652C041CB2C3B5004F3A06 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3652BBA1CB2C3B5004F3A06 /* GlobalFunctions.swift */; };
 		D3652C051CB2C3B5004F3A06 /* MumsnetCustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3652BBB1CB2C3B5004F3A06 /* MumsnetCustomError.swift */; };
+		D37205461CB3A8CA00BC59C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37205451CB3A8CA00BC59C6 /* LoginViewController.swift */; };
+		D37205481CB3E9B800BC59C6 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37205471CB3E9B800BC59C6 /* Extenstions.swift */; };
 		D3F2C97F1CAAE2BE003FA520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2C97E1CAAE2BE003FA520 /* AppDelegate.swift */; };
 		D3F2C9811CAAE2BE003FA520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2C9801CAAE2BE003FA520 /* ViewController.swift */; };
 		D3F2C9841CAAE2BE003FA520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F2C9821CAAE2BE003FA520 /* Main.storyboard */; };
@@ -323,6 +325,8 @@
 		D3652BB81CB2C3B5004F3A06 /* TalkFramework-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TalkFramework-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3652BBA1CB2C3B5004F3A06 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		D3652BBB1CB2C3B5004F3A06 /* MumsnetCustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetCustomError.swift; sourceTree = "<group>"; };
+		D37205451CB3A8CA00BC59C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
+		D37205471CB3E9B800BC59C6 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extenstions.swift; path = "../../../Test Chat/MumsnetChat/MumsnetChat/MumsnetChat/Extenstions.swift"; sourceTree = "<group>"; };
 		D3F2C97B1CAAE2BD003FA520 /* MumsnetChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MumsnetChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F2C97E1CAAE2BE003FA520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F2C9801CAAE2BE003FA520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -599,6 +603,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		D372053C1CB3A8AB00BC59C6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D37205451CB3A8CA00BC59C6 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		D3F2C9721CAAE2BD003FA520 = {
 			isa = PBXGroup;
 			children = (
@@ -620,9 +632,11 @@
 		D3F2C97D1CAAE2BE003FA520 /* MumsnetChat */ = {
 			isa = PBXGroup;
 			children = (
+				D372053C1CB3A8AB00BC59C6 /* Login */,
 				D33D66CF1CABDCE100364C53 /* ChatDetail */,
 				D33D66CE1CABDCD200364C53 /* ChatList */,
 				D3F2C97E1CAAE2BE003FA520 /* AppDelegate.swift */,
+				D37205471CB3E9B800BC59C6 /* Extenstions.swift */,
 				D3F2C9801CAAE2BE003FA520 /* ViewController.swift */,
 				D3F2C9821CAAE2BE003FA520 /* Main.storyboard */,
 				D3F2C9851CAAE2BE003FA520 /* Assets.xcassets */,
@@ -845,10 +859,12 @@
 				D3652BF81CB2C3B5004F3A06 /* Emoticon.swift in Sources */,
 				D3652BFE1CB2C3B5004F3A06 /* Newsletter.swift in Sources */,
 				D3652BEC1CB2C3B5004F3A06 /* UIFont+PreferredFontAdditions.swift in Sources */,
+				D37205461CB3A8CA00BC59C6 /* LoginViewController.swift in Sources */,
 				D3652BD51CB2C3B5004F3A06 /* Notifications.swift in Sources */,
 				D3652BF21CB2C3B5004F3A06 /* APIManager.swift in Sources */,
 				D33D66D51CABEFD100364C53 /* ChatDetailViewController.swift in Sources */,
 				D33D67041CAC2CF400364C53 /* UserActionHandler.swift in Sources */,
+				D37205481CB3E9B800BC59C6 /* Extenstions.swift in Sources */,
 				D3652C031CB2C3B5004F3A06 /* User.swift in Sources */,
 				D3652BE61CB2C3B5004F3A06 /* NSUserDefaults+MumsnetPreferences.swift in Sources */,
 				D3652BED1CB2C3B5004F3A06 /* RNCryptor.m in Sources */,
@@ -986,6 +1002,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MumsnetChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1084,6 +1101,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MumsnetChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1097,6 +1115,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MumsnetChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

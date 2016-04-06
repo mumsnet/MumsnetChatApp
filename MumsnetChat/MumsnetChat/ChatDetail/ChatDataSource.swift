@@ -28,11 +28,12 @@ class ChatDataSource: ChatDataSourceProtocol {
 //        }
 //    }
     lazy var messageSender: ChatMessageSender = {
-        let sender = ChatMessageSender(chat: self.chat)
+        let sender = ChatMessageSender()
         sender.onMessageChanged = { [weak self] (message) in
             guard let sSelf = self else { return }
             sSelf.delegate?.chatDataSourceDidUpdate(sSelf)
         }
+        sender.chat = self.chat
         return sender
     }()
     
@@ -98,47 +99,52 @@ class ChatDataSource: ChatDataSourceProtocol {
     
     // MARK: - Load Existing Messages
     
-    func reloadData() {
+    func refreshData() {
         
         // TODO: show loading
         APIManager.fetchChat(chatID: chat.objectID) { (result:ApiResult<MumsnetChat>) in
             switch result {
                 
             case ApiResult.Success(let chat):
-                self.chat = chat
-                
-                let portedMessages = chat.messages.map({ (message:MumsnetChatMessage) -> TextMessageModel in
-                    
-                    let message =  TextMessageModel(messageModel: message, text: message.text ?? "")
-                    message.status = MessageStatus.Success
-                    return message
-                })
-                
-                
-                self.slidingWindow.setItems(portedMessages.map({$0 as ChatItemProtocol}))
-                self.delegate?.chatDataSourceDidUpdate(self)
+                self.setupWithChat(chat)
                 
             case ApiResult.Error(let errorResponse):
                 print(errorResponse.error)
             }
         }
     }
+    
+    /**
+     Setup Chat UI with new Chat
+     */
+    func setupWithChat(chat:MumsnetChat) {
+        
+        self.chat = chat
+        
+        let portedMessages = chat.messages.map({ (message:MumsnetChatMessage) -> TextMessageModel in
+            
+            let message =  TextMessageModel(messageModel: message, text: message.text ?? "")
+            message.status = MessageStatus.Success
+            return message
+        })
+        
+        
+        self.slidingWindow.setItems(portedMessages.map({$0 as ChatItemProtocol}))
+        self.delegate?.chatDataSourceDidUpdate(self)
+    }
 }
 
 class ChatMessageSender {
     
-    var chat:MumsnetChat
+    var chat:MumsnetChat?
     var onMessageChanged: ((message: MessageModelProtocol) -> Void)?
-    
-    init(chat:MumsnetChat) {
-        self.chat = chat
-    }
     
     func sendMessage(message:TextMessageModelProtocol) {
         
-        self.updateMessage(message, status: MessageStatus.Sending)
-
-            APIManager.sendChatMessage(message.text, chat: self.chat) { (result:ApiResult<MumsnetChat>) in
+        if let chat = chat {
+            self.updateMessage(message, status: MessageStatus.Sending)
+            
+            APIManager.sendChatMessage(message.text, chat: chat) { (result:ApiResult<MumsnetChat>) in
                 
                 switch result {
                     
@@ -146,17 +152,13 @@ class ChatMessageSender {
                     
                     self.chat = chat
                     self.updateMessage(message, status: MessageStatus.Success)
-//                    
-//                    if let message = chat.lastMessage {
-//                        self.slidingWindow.insertItem(message, position: .Bottom)
-//                        self.delegate?.chatDataSourceDidUpdate(self)
-//                    }
                     
                 case ApiResult.Error(let errorResponse):
                     print(errorResponse.error ?? "")
                     self.updateMessage(message, status: MessageStatus.Failed)
                     
                 }
+            }
         }
     }
     
