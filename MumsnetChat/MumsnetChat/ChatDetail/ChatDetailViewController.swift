@@ -21,16 +21,7 @@ class ChatDetailViewController: ChatViewController {
     @IBOutlet weak var topNavTitleLabel: UILabel!
     @IBOutlet weak var bottomNavTitleLabel: UILabel!
     
-    var chat:MumsnetChat? {
-        didSet {
-            if let chat = chat {
-                self.messageSender.chat = chat
-                self.dataSource = ChatDataSource(delegate: self, chat: chat)
-                self.chatInputPresenter?.noChatCompletion = nil
-                
-            }
-        }
-    }
+    var chat:MumsnetChat?
     var messageSender = ChatMessageSender()
     var newMessageCheckTimer = NSTimer()
     
@@ -91,15 +82,15 @@ class ChatDetailViewController: ChatViewController {
             self.fromField.text = user.username
         }
 
-        self.setupNavTitles(self.chat)
         
         if let chat = self.chat {
-           
-//            self.title = chat.otherUserUsernames.first ?? "Invalid User"
-            
+         
+            self.showNewMessageBar(show: false, animated: false)
+            self.setupWithChat(chat)
         }
         else { // Show new chat
             
+            self.showNewMessageBar(show: true, animated: false)
             
             // Set completion for when first message is sent
             self.chatInputPresenter?.noChatCompletion = { (inputBar:ChatInputBar) -> Void in
@@ -107,12 +98,22 @@ class ChatDetailViewController: ChatViewController {
                 self.startNewChat(from: self.fromField.text, to: self.toField.text, message: inputBar.inputText)
             }
         }
+    }
+    
+    private func setupWithChat(chat:MumsnetChat) {
         
-        let showNewMessage = (self.chat == nil)
-        self.showNewMessageBar(show: showNewMessage, animated: false)
+        self.chat = chat
+        self.messageSender.chat = chat
+        self.dataSource = ChatDataSource(delegate: self, chat: chat)
+        self.chatInputPresenter?.noChatCompletion = nil
         
-        // Start timer 
+        self.setupNavTitles(chat)
+
+        // Start timer
         self.newMessageCheckTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(ChatDetailViewController.refreshData), userInfo: nil, repeats: true)
+        
+        self.showNewMessageBar(show: false, animated: true)
+
     }
     
     
@@ -125,7 +126,7 @@ class ChatDetailViewController: ChatViewController {
             
             var bottomText = ""
             if let currentUsername = chat.currentUserUsername {
-                bottomText = "From: \(currentUsername)"
+                bottomText = "Sending from: \(currentUsername)"
             }
             self.bottomNavTitleLabel.alpha = 1
             self.bottomNavTitleLabel.text = bottomText
@@ -199,7 +200,6 @@ class ChatDetailViewController: ChatViewController {
                     }
             })
         }
-        
     }
     
     /**
@@ -209,15 +209,19 @@ class ChatDetailViewController: ChatViewController {
         
         if let toUser = to, let fromUser = fromUser {
             if let message = message {
+                
                 APIManager.startChat([fromUser, toUser], message: message, completion: { (result:ApiResult<MumsnetChat>) in
             
                     self.setPlaceholder(nil)
 
                     switch result {
                     case ApiResult.Success(let chat):
-                        self.chat = chat
-                        self.showNewMessageBar(show: false, animated: true)
-                        self.dataSource?.setupWithChat(chat)
+                        
+                        self.setupWithChat(chat)
+                        self.refreshData()
+//                        self.chat = chat
+//                        self.showNewMessageBar(show: false, animated: true)
+//                        self.dataSource?.setupWithChat(chat)
                         
                     case ApiResult.Error(let errorResponse):
                         print(errorResponse.error)
@@ -278,25 +282,18 @@ class ChatDetailViewController: ChatViewController {
     
     override func createPresenterBuilders() -> [ChatItemType : [ChatItemPresenterBuilderProtocol]] {
         
-        let builder = TextMessageViewModelDefaultBuilder()
-        let interactionHandler = TextMessageHandler(baseHandler: self.baseMessageHandler)
-
         return [
-            MumsnetChatMessage.MessageType.Text.rawValue: [
+            TextMessageModel.chatItemType: [
                 TextMessagePresenterBuilder(
-                    viewModelBuilder: builder,
-                    interactionHandler: interactionHandler
+                    viewModelBuilder: TextMessageViewModelDefaultBuilder(),
+                    interactionHandler: TextMessageHandler(baseHandler: self.baseMessageHandler)
                 )
             ],
             SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()]
         ]
     }
-    
-//    // MARK: - ChatDataSourceDelegateProtocol
-//    
-//    override func chatDataSourceDidUpdate(chatDataSource: ChatDataSourceProtocol) {
-//        
-//        
-//    }
+
 }
+
+
 

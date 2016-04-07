@@ -125,9 +125,9 @@
 		4CB9282C1C66BFBC00CE5F08 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB928281C66BFBC00CE5F08 /* Notifications.swift */; };
 		4CCFA79A1B2BE71600B6F460 /* URLProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA7991B2BE71600B6F460 /* URLProtocolTests.swift */; };
 		4CCFA79B1B2BE71600B6F460 /* URLProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA7991B2BE71600B6F460 /* URLProtocolTests.swift */; };
-		4CDE2C371AF8932A00BABAE5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C361AF8932A00BABAE5 /* Manager.swift */; };
+		4CDE2C371AF8932A00BABAE5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C361AF8932A00BABAE5 /* Manager.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CDE2C381AF8932A00BABAE5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C361AF8932A00BABAE5 /* Manager.swift */; };
-		4CDE2C3A1AF899EC00BABAE5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C391AF899EC00BABAE5 /* Request.swift */; };
+		4CDE2C3A1AF899EC00BABAE5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C391AF899EC00BABAE5 /* Request.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CDE2C3B1AF899EC00BABAE5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C391AF899EC00BABAE5 /* Request.swift */; };
 		4CDE2C3D1AF89D4900BABAE5 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C3C1AF89D4900BABAE5 /* Download.swift */; };
 		4CDE2C3E1AF89D4900BABAE5 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C3C1AF89D4900BABAE5 /* Download.swift */; };
@@ -135,9 +135,9 @@
 		4CDE2C411AF89E0700BABAE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C3F1AF89E0700BABAE5 /* Upload.swift */; };
 		4CDE2C431AF89F0900BABAE5 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C421AF89F0900BABAE5 /* Validation.swift */; };
 		4CDE2C441AF89F0900BABAE5 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C421AF89F0900BABAE5 /* Validation.swift */; };
-		4CDE2C461AF89FF300BABAE5 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C451AF89FF300BABAE5 /* ResponseSerialization.swift */; };
+		4CDE2C461AF89FF300BABAE5 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C451AF89FF300BABAE5 /* ResponseSerialization.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CDE2C471AF89FF300BABAE5 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDE2C451AF89FF300BABAE5 /* ResponseSerialization.swift */; };
-		4CE2724F1AF88FB500F1D59A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2724E1AF88FB500F1D59A /* ParameterEncoding.swift */; };
+		4CE2724F1AF88FB500F1D59A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2724E1AF88FB500F1D59A /* ParameterEncoding.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4CE272501AF88FB500F1D59A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2724E1AF88FB500F1D59A /* ParameterEncoding.swift */; };
 		4CEC605A1B745C9100E684F4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DC8531B68908E00476DE3 /* Error.swift */; };
 		4CEC605B1B745C9100E684F4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E5BF71B673D3400816CCC /* Result.swift */; };

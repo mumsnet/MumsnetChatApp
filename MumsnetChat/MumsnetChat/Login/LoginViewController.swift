@@ -123,6 +123,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         })
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        if textField == self.emailField {
+            self.passwordField.becomeFirstResponder()
+        }
+        else if textField == self.passwordField {
+            self.dismissKeyboard()
+        }
+        
+        return false
+    }
 }
 
 

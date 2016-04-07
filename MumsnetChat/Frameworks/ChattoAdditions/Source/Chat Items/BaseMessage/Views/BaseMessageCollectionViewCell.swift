@@ -111,8 +111,9 @@ public class BaseMessageCollectionViewCell<BubbleViewType where BubbleViewType:U
         return self.bubbleView.canCalculateSizeInBackground
     }
 
-    public /*private(set)*/ var bubbleView: BubbleViewType!
+    public private(set) var bubbleView: BubbleViewType!
     func createBubbleView() -> BubbleViewType! {
+        print("Bubble view not initialised properly - crashing")
         assert(false, "Override in subclass")
         return nil
     }
@@ -139,12 +140,12 @@ public class BaseMessageCollectionViewCell<BubbleViewType where BubbleViewType:U
     }()
 
     private func commonInit() {
-        self.bubbleView = self.createBubbleView()
-//        self.bubbleView.addGestureRecognizer(self.tapGestureRecognizer)
-//        self.bubbleView.addGestureRecognizer(self.longPressGestureRecognizer)
         
-        print(self)
-        print(self.contentView)
+        self.bubbleView = self.createBubbleView()
+        self.bubbleView.addGestureRecognizer(self.tapGestureRecognizer)
+        self.bubbleView.addGestureRecognizer(self.longPressGestureRecognizer)
+        
+        
         self.contentView.addSubview(self.bubbleView)
         self.contentView.addSubview(self.failedButton)
         self.contentView.exclusiveTouch = true
@@ -166,7 +167,7 @@ public class BaseMessageCollectionViewCell<BubbleViewType where BubbleViewType:U
 
     private lazy var failedButton: UIButton = {
         let button = UIButton(type: .Custom)
-        button.addTarget(self, action: "failedButtonTapped", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(BaseMessageCollectionViewCell.failedButtonTapped), forControlEvents: .TouchUpInside)
         return button
     }()
 

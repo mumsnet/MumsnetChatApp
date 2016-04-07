@@ -15,10 +15,11 @@ class ChatListCell: UITableViewCell {
     @IBOutlet weak var fromToLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var newMessagesImageView: UIImageView!
     
     func setupWithChat(chat:MumsnetChat) {
         
-        self.fromToLabel.text = "\(chat.currentUserUsername ?? "")  ->  \(chat.otherUserUsernames.first ?? "")"
+        self.fromToLabel.text = "\(chat.currentUserUsername ?? "")  ->  \(chat.otherUserUsernames.first ?? "Invalid Username")"
         
         var dateText = ""
         if let message = chat.lastMessage {
@@ -26,6 +27,6 @@ class ChatListCell: UITableViewCell {
         }
         self.dateLabel.text = dateText
         self.messageLabel.text = chat.lastMessage?.text ?? ""
-        
+        self.newMessagesImageView.hidden = chat.unreadMessages == 0
     }
 }

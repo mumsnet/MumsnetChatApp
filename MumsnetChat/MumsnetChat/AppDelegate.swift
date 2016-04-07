@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ChattoAdditions
+import Chatto
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // SETUP API
         AppDelegate.setUpAPIConstants()
-        
-//        if UserManager.currentUser() == nil {
-//            if let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
-//                self.presentViewController(loginVC, animated: false, completion: nil)
-//            }
-//        }
         
         return true
     }

@@ -11,7 +11,6 @@ import Chatto
 import ChattoAdditions
 
 
-
 class ChatDataSource: ChatDataSourceProtocol {
     
     // Called whenever the data source is updated
@@ -58,9 +57,7 @@ class ChatDataSource: ChatDataSourceProtocol {
         chatItems = self.slidingWindow.itemsInWindow.map({$0 as ChatItemProtocol})
         
         return chatItems
-        
     }
-    
     
     
     func loadNext(completion: () -> Void) {
@@ -80,9 +77,6 @@ class ChatDataSource: ChatDataSourceProtocol {
     }
     
     func addTextMessage(text: String) {
-//        let uid = "\(self.nextMessageId)"
-//        self.nextMessageId += 1
-//        let message = createTextMessageModel(uid, text: text, isIncoming: false)
         
         let chatMessage = MumsnetChatMessage.createLocalMessage(text, isIncoming: false, senderUsername: self.chat.currentUserUsername ?? "")
         let uiMessage = TextMessageModel(messageModel: chatMessage, text: text)
@@ -93,26 +87,9 @@ class ChatDataSource: ChatDataSourceProtocol {
         
     }
     
-    // MARK: - Load Existing Messages
-    
-//    func refreshData() {
-//        
-//        // TODO: show loading
-//        
-//        APIManager.fetchChat(chatID: chat.objectID) { (result:ApiResult<MumsnetChat>) in
-//            switch result {
-//                
-//            case ApiResult.Success(let chat):
-//                self.setupWithChat(chat)
-//                
-//            case ApiResult.Error(let errorResponse):
-//                print(errorResponse.error)
-//            }
-//        }
-//    }
     
     /**
-     Setup Chat UI with new Chat
+     Setup Chat UI with new Chat (if chat was not loaded in the beginning)
      */
     func setupWithChat(chat:MumsnetChat) {
         
@@ -125,7 +102,6 @@ class ChatDataSource: ChatDataSourceProtocol {
             return message
         })
         
-        // CRASH?
         self.slidingWindow.setItems(portedMessages.map({$0 as ChatItemProtocol}))
         self.delegate?.chatDataSourceDidUpdate(self)
     }
@@ -172,3 +148,13 @@ class ChatMessageSender {
     
     
 }
+
+/**
+ Extension to define the only type used
+ */
+extension TextMessageModel {
+    static var chatItemType: ChatItemType {
+        return "text"
+    }
+}
+

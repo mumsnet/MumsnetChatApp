@@ -760,6 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.badoo.ChattoAdditions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};

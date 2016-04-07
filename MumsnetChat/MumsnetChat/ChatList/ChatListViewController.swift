@@ -13,6 +13,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     let pullToRefresh = UIRefreshControl()
+    var newMessageCheckTimer = NSTimer()
     var chats:[MumsnetChat] = [] {
         
         didSet {
@@ -33,7 +34,6 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.addSubview(self.pullToRefresh)
         self.tableView.sendSubviewToBack(self.pullToRefresh)
 
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -43,12 +43,23 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         if let user = UserManager.currentUser() {
             // Logged in
-            self.reloadChats(pageToLoad: 1)
+            self.refreshTriggered()
             self.title = user.username
         }
         else { // Logged out
             self.presentLogin(animated: false)
         }
+        
+        // Start timer
+        self.newMessageCheckTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(ChatListViewController.refreshTriggered), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+
+        // Stop refresh
+        self.newMessageCheckTimer.invalidate()
     }
     
     // MARK: - Misc
@@ -89,6 +100,26 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
                 
             case ApiResult.Error(let errorResponse):
                 print(errorResponse.error ?? "")
+            }
+        }
+    }
+    
+    func deleteChat(chat:MumsnetChat) {
+        
+        APIManager.deleteChat(chat) { (result:ApiResult<Void>) in
+            switch result {
+                
+            case ApiResult.Success(_):
+                
+                // Success, remove chat from datasource, then reload (to be sure)
+                if let chatIndex = self.chats.indexOf(chat) {
+                    self.chats.removeAtIndex(chatIndex)
+                    self.tableView.reloadData()
+                }
+                self.refreshTriggered()
+                
+            case ApiResult.Error(let errorResponse):
+                print(errorResponse.error)
             }
         }
     }
@@ -140,6 +171,25 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.navigationController?.pushViewController(chatDetailVC, animated: true)
 
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            // Ensure data source is correct
+            if self.chats.count > indexPath.row {
+                let chat = self.chats[indexPath.row]
+                self.deleteChat(chat)
+            }
+            else {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
