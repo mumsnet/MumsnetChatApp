@@ -20,6 +20,7 @@ class ChatDetailViewController: ChatViewController {
     // Title labels
     @IBOutlet weak var topNavTitleLabel: UILabel!
     @IBOutlet weak var bottomNavTitleLabel: UILabel!
+    @IBOutlet weak var defaultTitleLabel: UILabel!
     
     var chat:MumsnetChat?
     var messageSender = ChatMessageSender()
@@ -91,6 +92,7 @@ class ChatDetailViewController: ChatViewController {
         else { // Show new chat
             
             self.showNewMessageBar(show: true, animated: false)
+            self.setupNavTitles(nil)
             
             // Set completion for when first message is sent
             self.chatInputPresenter?.noChatCompletion = { (inputBar:ChatInputBar) -> Void in
@@ -130,13 +132,13 @@ class ChatDetailViewController: ChatViewController {
             }
             self.bottomNavTitleLabel.alpha = 1
             self.bottomNavTitleLabel.text = bottomText
-            self.title = nil
+            self.defaultTitleLabel.text = ""
             
         }
         else {
             self.topNavTitleLabel.alpha = 0
             self.bottomNavTitleLabel.alpha = 0
-            self.title = "New Chat"
+            self.defaultTitleLabel.text = "New Chat"
         }
     }
     

@@ -14,9 +14,15 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     
     let pullToRefresh = UIRefreshControl()
     var newMessageCheckTimer = NSTimer()
-    var chats:[MumsnetChat] = [] {
+    /// Chats stored temporarily that are faster to access
+    var chats:[MumsnetChat] {
         
-        didSet {
+        get {
+            return TalkCache.fetchOverviewChats()
+        }
+        set {
+            TalkCache.setOverviewChats(newValue)
+            
             self.tableView.reloadData()
             
             let placeholder: String? = self.chats.count == 0 ? "No chats yet." : nil
@@ -43,6 +49,7 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
         
         if let user = UserManager.currentUser() {
             // Logged in
+            self.tableView.reloadData()
             self.refreshTriggered()
             self.title = user.username
         }

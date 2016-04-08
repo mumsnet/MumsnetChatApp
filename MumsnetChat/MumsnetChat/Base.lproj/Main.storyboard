@@ -347,12 +347,26 @@
                             <rect key="frame" x="230" y="6" width="140" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="l6H-Za-2BN" userLabel="MainTitle">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="6Ho-5J-Ney"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="6Ho-5J-Ney"/>
+                                        </mask>
+                                    </variation>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="clU-0a-8nc">
                                     <rect key="frame" x="0.0" y="0.0" width="140" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="18" id="uTU-Hc-Kgw"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -369,17 +383,22 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="0uf-Ga-ALG" firstAttribute="leading" secondItem="cH5-54-DQw" secondAttribute="leading" id="5xd-Ud-H5O"/>
+                                <constraint firstAttribute="bottom" secondItem="l6H-Za-2BN" secondAttribute="bottom" id="8cD-g9-ED6"/>
+                                <constraint firstItem="l6H-Za-2BN" firstAttribute="leading" secondItem="cH5-54-DQw" secondAttribute="leading" id="A25-Dc-rKr"/>
                                 <constraint firstItem="clU-0a-8nc" firstAttribute="leading" secondItem="cH5-54-DQw" secondAttribute="leading" id="BK7-xT-vji"/>
                                 <constraint firstAttribute="trailing" secondItem="clU-0a-8nc" secondAttribute="trailing" id="KqW-Ap-q47"/>
                                 <constraint firstAttribute="bottom" secondItem="0uf-Ga-ALG" secondAttribute="bottom" constant="2" id="NRN-LW-j2b"/>
+                                <constraint firstAttribute="trailing" secondItem="l6H-Za-2BN" secondAttribute="trailing" id="WAt-Nv-TVN"/>
                                 <constraint firstItem="clU-0a-8nc" firstAttribute="top" secondItem="cH5-54-DQw" secondAttribute="top" id="Zpd-3y-s7a"/>
                                 <constraint firstAttribute="trailing" secondItem="0uf-Ga-ALG" secondAttribute="trailing" id="ikE-Kf-M9f"/>
+                                <constraint firstItem="l6H-Za-2BN" firstAttribute="top" secondItem="cH5-54-DQw" secondAttribute="top" id="ohY-xZ-2gy"/>
                             </constraints>
                         </view>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="bottomNavTitleLabel" destination="0uf-Ga-ALG" id="DzV-Iy-7Zt"/>
+                        <outlet property="defaultTitleLabel" destination="l6H-Za-2BN" id="xT1-QV-7zt"/>
                         <outlet property="fromField" destination="9Fa-wq-4gg" id="6kt-oW-LNV"/>
                         <outlet property="newUserBar" destination="t2g-qv-9LR" id="o3r-yo-tnI"/>
                         <outlet property="newUserBarY" destination="EAl-Cq-nh7" id="n70-WU-TUR"/>

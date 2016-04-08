@@ -23,6 +23,8 @@
 		D33D66FE1CAC040C00364C53 /* Chatto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33D66DC1CAC03DF00364C53 /* Chatto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D33D67021CAC09FE00364C53 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D67011CAC09FE00364C53 /* ChatDataSource.swift */; };
 		D33D67041CAC2CF400364C53 /* UserActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D67031CAC2CF400364C53 /* UserActionHandler.swift */; };
+		D33E4E161CB8102C005ED0AC /* ReadableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E4E151CB8102C005ED0AC /* ReadableDate.swift */; };
+		D33E4E211CB81477005ED0AC /* AFDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E4E201CB81477005ED0AC /* AFDateExtension.swift */; };
 		D3652BBC1CB2C3B5004F3A06 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3652B5F1CB2C3B5004F3A06 /* APIRequest.swift */; };
 		D3652BBD1CB2C3B5004F3A06 /* BookmarkedPaginatedAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3652B601CB2C3B5004F3A06 /* BookmarkedPaginatedAPIRequest.swift */; };
 		D3652BBE1CB2C3B5004F3A06 /* EmoticonImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3652B611CB2C3B5004F3A06 /* EmoticonImageDownloader.swift */; };
@@ -242,6 +244,8 @@
 		D33D66E81CAC03F000364C53 /* ChattoAdditions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChattoAdditions.xcodeproj; path = ChattoAdditions/ChattoAdditions.xcodeproj; sourceTree = "<group>"; };
 		D33D67011CAC09FE00364C53 /* ChatDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatDataSource.swift; path = ChatDetail/ChatDataSource.swift; sourceTree = "<group>"; };
 		D33D67031CAC2CF400364C53 /* UserActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserActionHandler.swift; path = ChatDetail/UserActionHandler.swift; sourceTree = "<group>"; };
+		D33E4E151CB8102C005ED0AC /* ReadableDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadableDate.swift; sourceTree = "<group>"; };
+		D33E4E201CB81477005ED0AC /* AFDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDateExtension.swift; sourceTree = "<group>"; };
 		D3652B5F1CB2C3B5004F3A06 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D3652B601CB2C3B5004F3A06 /* BookmarkedPaginatedAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkedPaginatedAPIRequest.swift; sourceTree = "<group>"; };
 		D3652B611CB2C3B5004F3A06 /* EmoticonImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonImageDownloader.swift; sourceTree = "<group>"; };
@@ -409,6 +413,15 @@
 				D33D66F81CAC03F500364C53 /* ChattoAdditionsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D33E4E1F1CB81417005ED0AC /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				D37A9A4D1CB69CFB0002C4F0 /* Extenstions.swift */,
+				D33E4E201CB81477005ED0AC /* AFDateExtension.swift */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 		D3652B5D1CB2C3B5004F3A06 /* API */ = {
@@ -635,14 +648,15 @@
 				D372053C1CB3A8AB00BC59C6 /* Login */,
 				D33D66CF1CABDCE100364C53 /* ChatDetail */,
 				D33D66CE1CABDCD200364C53 /* ChatList */,
+				D33E4E1F1CB81417005ED0AC /* Misc */,
 				D3F2C97E1CAAE2BE003FA520 /* AppDelegate.swift */,
-				D37A9A4D1CB69CFB0002C4F0 /* Extenstions.swift */,
 				D3F2C9801CAAE2BE003FA520 /* ViewController.swift */,
 				D3F2C9821CAAE2BE003FA520 /* Main.storyboard */,
 				D3F2C9851CAAE2BE003FA520 /* Assets.xcassets */,
 				D3F2C9871CAAE2BE003FA520 /* LaunchScreen.storyboard */,
 				D3F2C98A1CAAE2BE003FA520 /* Info.plist */,
 				D33D66CD1CABDA9E00364C53 /* MumsnetChat-Bridging-Header.h */,
+				D33E4E151CB8102C005ED0AC /* ReadableDate.swift */,
 			);
 			path = MumsnetChat;
 			sourceTree = "<group>";
@@ -878,6 +892,7 @@
 				D3652BD11CB2C3B5004F3A06 /* ConfigurationConstants.swift in Sources */,
 				D3652BD71CB2C3B5004F3A06 /* UserDefaultsConstants.swift in Sources */,
 				D3652BDC1CB2C3B5004F3A06 /* NSDateFormatter+ISO8601.swift in Sources */,
+				D33E4E211CB81477005ED0AC /* AFDateExtension.swift in Sources */,
 				D3652BE31CB2C3B5004F3A06 /* NSURLRequest+MumsnetDefaults.swift in Sources */,
 				D3652BE81CB2C3B5004F3A06 /* String+Trimming.swift in Sources */,
 				D33D66D11CABDD1100364C53 /* ChatListCell.swift in Sources */,
@@ -903,6 +918,7 @@
 				D3F2C97F1CAAE2BE003FA520 /* AppDelegate.swift in Sources */,
 				D3652BC21CB2C3B5004F3A06 /* MumsnetPaginatedData.swift in Sources */,
 				D3652BD81CB2C3B5004F3A06 /* Array+MumsnetModelObject.swift in Sources */,
+				D33E4E161CB8102C005ED0AC /* ReadableDate.swift in Sources */,
 				D3652BE51CB2C3B5004F3A06 /* NSURLSessionConfiguration+MumsnetDefaults.swift in Sources */,
 				D3652BC11CB2C3B5004F3A06 /* MumsnetDataDelete.swift in Sources */,
 				D3652BD01CB2C3B5004F3A06 /* APIConstants.swift in Sources */,

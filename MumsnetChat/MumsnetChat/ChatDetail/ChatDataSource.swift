@@ -34,9 +34,13 @@ class ChatDataSource: ChatDataSourceProtocol {
         
         self.delegate = delegate
         self.chat = chat
-        // Hack to fix objc bridging bug
-        let messages = chat.messages.map({$0 as ChatItemProtocol})
-        self.slidingWindow = SlidingDataSource(items: messages, pageSize: APIManager.Constants.ChatPageDefaultSize)
+        
+        // Start with default of 0
+        self.slidingWindow = SlidingDataSource(items: [], pageSize: APIManager.Constants.ChatPageDefaultSize)
+        
+        self.setChatMessages(chat)
+        
+//        self.slidingWindow = SlidingDataSource(items: messages, pageSize: APIManager.Constants.ChatPageDefaultSize)
 
     }
     
@@ -95,7 +99,31 @@ class ChatDataSource: ChatDataSourceProtocol {
         
         self.chat = chat
         
-        let portedMessages = chat.messages.map({ (message:MumsnetChatMessage) -> TextMessageModel in
+        self.setChatMessages(chat)
+        self.delegate?.chatDataSourceDidUpdate(self)
+    }
+    
+    func setChatMessages(chatWithMessages:MumsnetChat) {
+        
+        // Hack to fix objc bridging bug
+        var messages = chatWithMessages.messages//.map({$0 as ChatItemProtocol})
+        
+        
+        // If messages in chat, cache results 
+        if chatWithMessages.messages.count > 0 {
+            TalkCache.setDetailChat(chatWithMessages)
+        }
+        else {
+            // If no unread messages AND no messages in chat show cached messages
+            if chat.unreadMessages == 0 {
+                if let chat = TalkCache.fetchChatWithID(chat.objectID) {
+                    messages = chat.messages
+                }
+            }
+        }
+        
+        // Create TextMessageModel from the base MumsnetChatMessage
+        let portedMessages = messages.map({ (message:MumsnetChatMessage) -> TextMessageModel in
             
             let message =  TextMessageModel(messageModel: message, text: message.text ?? "")
             message.status = MessageStatus.Success
@@ -103,7 +131,6 @@ class ChatDataSource: ChatDataSourceProtocol {
         })
         
         self.slidingWindow.setItems(portedMessages.map({$0 as ChatItemProtocol}))
-        self.delegate?.chatDataSourceDidUpdate(self)
     }
 }
 
