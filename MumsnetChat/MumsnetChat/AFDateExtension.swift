@@ -16,6 +16,14 @@ let AltRSSFormat = "d MMM yyyy HH:mm:ss ZZZ" // "09 Sep 2011 15:26:08 +0200"
 
 public enum ISO8601Format: String {
     
+    // Custom
+    case HoursMinutes = "HH:mm" // 19:20
+    case DayTimeReadable = "EEEE HH:mm" // Fri 1 Apr 20:01
+    case DateTimeReadable = "EEE d MMM, HH:mm" // Fri 1 Apr 20:01
+    case DateOnlyReadable = "dd/MM/yyyy" // 01/04/2016
+    case DateTimeYearReadable = "EEE d MMM yyyy, HH:mm" // Fri 1 Apr 2015 20:01
+    
+    // Default
     case Year = "yyyy" // 1997
     case YearMonth = "yyyy-MM" // 1997-07
     case Date = "yyyy-MM-dd" // 1997-07-16

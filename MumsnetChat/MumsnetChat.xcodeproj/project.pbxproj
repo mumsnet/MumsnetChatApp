@@ -418,6 +418,7 @@
 		D33E4E1F1CB81417005ED0AC /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				D33E4E151CB8102C005ED0AC /* ReadableDate.swift */,
 				D37A9A4D1CB69CFB0002C4F0 /* Extenstions.swift */,
 				D33E4E201CB81477005ED0AC /* AFDateExtension.swift */,
 			);
@@ -656,7 +657,6 @@
 				D3F2C9871CAAE2BE003FA520 /* LaunchScreen.storyboard */,
 				D3F2C98A1CAAE2BE003FA520 /* Info.plist */,
 				D33D66CD1CABDA9E00364C53 /* MumsnetChat-Bridging-Header.h */,
-				D33E4E151CB8102C005ED0AC /* ReadableDate.swift */,
 			);
 			path = MumsnetChat;
 			sourceTree = "<group>";

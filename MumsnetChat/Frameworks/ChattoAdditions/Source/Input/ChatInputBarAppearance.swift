@@ -23,9 +23,9 @@
 */
 
 public struct ChatInputBarAppearance {
-    public var textFont = UIFont.systemFontOfSize(12)
+    public var textFont = UIFont.systemFontOfSize(16)
     public var textColor = UIColor.blackColor()
-    public var textPlaceholderFont = UIFont.systemFontOfSize(12)
+    public var textPlaceholderFont = UIFont.systemFontOfSize(16)
     public var textPlaceholderColor = UIColor.grayColor()
     public var textPlaceholder = ""
     public var sendButtonTitle = ""

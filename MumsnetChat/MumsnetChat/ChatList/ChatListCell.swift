@@ -23,7 +23,7 @@ class ChatListCell: UITableViewCell {
         
         var dateText = ""
         if let message = chat.lastMessage {
-            dateText = NSDateFormatter.mmHHddMMStringFromDate(dateToConvert: message.postedAt) ?? ""
+            dateText = message.postedAt?.readableDateShort() ?? ""
         }
         self.dateLabel.text = dateText
         self.messageLabel.text = chat.lastMessage?.text ?? ""
