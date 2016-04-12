@@ -18,10 +18,10 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     var chats:[MumsnetChat] {
         
         get {
-            return TalkCache.fetchOverviewChats()
+            return ChatCache.fetchOverviewChats()
         }
         set {
-            TalkCache.setOverviewChats(newValue)
+            ChatCache.setOverviewChats(newValue)
             
             self.tableView.reloadData()
             

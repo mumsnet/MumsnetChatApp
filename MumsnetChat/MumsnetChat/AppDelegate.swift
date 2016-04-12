@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // SETUP API
         AppDelegate.setUpAPIConstants()
         
+        
+        
         return true
     }
     

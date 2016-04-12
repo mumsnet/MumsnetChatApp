@@ -111,12 +111,12 @@ class ChatDataSource: ChatDataSourceProtocol {
         
         // If messages in chat, cache results 
         if chatWithMessages.messages.count > 0 {
-            TalkCache.setDetailChat(chatWithMessages)
+            ChatCache.setDetailChat(chatWithMessages)
         }
         else {
             // If no unread messages AND no messages in chat show cached messages
             if chat.unreadMessages == 0 {
-                if let chat = TalkCache.fetchChatWithID(chat.objectID) {
+                if let chat = ChatCache.fetchChatWithID(chat.objectID) {
                     messages = chat.messages
                 }
             }
