@@ -29,6 +29,10 @@
 		D3A6C6E01CBCF5D000A249E9 /* ChattoAdditions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3A6C6DC1CBCF5C400A249E9 /* ChattoAdditions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3A6C6E31CBCF5D000A249E9 /* Chatto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A6C6D31CBCF5B700A249E9 /* Chatto.framework */; };
 		D3A6C6E41CBCF5D000A249E9 /* Chatto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3A6C6D31CBCF5B700A249E9 /* Chatto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3A6C6ED1CBD345F00A249E9 /* APIManager+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6E91CBD345F00A249E9 /* APIManager+Chat.swift */; };
+		D3A6C6EE1CBD345F00A249E9 /* ChatCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6EA1CBD345F00A249E9 /* ChatCache.swift */; };
+		D3A6C6EF1CBD345F00A249E9 /* MumsnetChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6EB1CBD345F00A249E9 /* MumsnetChat.swift */; };
+		D3A6C6F01CBD345F00A249E9 /* MumsnetChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6EC1CBD345F00A249E9 /* MumsnetChatMessage.swift */; };
 		D3A73DF81CBCF4B200384DEF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC11CBCF4B100384DEF /* APIRequest.swift */; };
 		D3A73DF91CBCF4B200384DEF /* BookmarkedPaginatedAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC21CBCF4B100384DEF /* BookmarkedPaginatedAPIRequest.swift */; };
 		D3A73DFA1CBCF4B200384DEF /* EmoticonImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC31CBCF4B100384DEF /* EmoticonImageDownloader.swift */; };
@@ -49,10 +53,6 @@
 		D3A73E091CBCF4B200384DEF /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD41CBCF4B100384DEF /* icomoon.ttf */; };
 		D3A73E0A1CBCF4B200384DEF /* openQuote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD51CBCF4B100384DEF /* openQuote@2x.png */; };
 		D3A73E0B1CBCF4B200384DEF /* openQuote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD61CBCF4B100384DEF /* openQuote@3x.png */; };
-		D3A73E0C1CBCF4B200384DEF /* APIManager+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CD81CBCF4B100384DEF /* APIManager+Chat.swift */; };
-		D3A73E0D1CBCF4B200384DEF /* ChatCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CD91CBCF4B100384DEF /* ChatCache.swift */; };
-		D3A73E0E1CBCF4B200384DEF /* MumsnetChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDA1CBCF4B100384DEF /* MumsnetChat.swift */; };
-		D3A73E0F1CBCF4B200384DEF /* MumsnetChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDB1CBCF4B100384DEF /* MumsnetChatMessage.swift */; };
 		D3A73E101CBCF4B200384DEF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDD1CBCF4B100384DEF /* APIConstants.swift */; };
 		D3A73E111CBCF4B200384DEF /* ConfigurationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDE1CBCF4B100384DEF /* ConfigurationConstants.swift */; };
 		D3A73E121CBCF4B200384DEF /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDF1CBCF4B100384DEF /* ErrorConstants.swift */; };
@@ -246,6 +246,10 @@
 		D37A9A4D1CB69CFB0002C4F0 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		D3A6C6CD1CBCF5B700A249E9 /* Chatto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Chatto.xcodeproj; path = Chatto/Chatto.xcodeproj; sourceTree = "<group>"; };
 		D3A6C6D61CBCF5C400A249E9 /* ChattoAdditions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChattoAdditions.xcodeproj; path = ChattoAdditions/ChattoAdditions.xcodeproj; sourceTree = "<group>"; };
+		D3A6C6E91CBD345F00A249E9 /* APIManager+Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIManager+Chat.swift"; sourceTree = "<group>"; };
+		D3A6C6EA1CBD345F00A249E9 /* ChatCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCache.swift; sourceTree = "<group>"; };
+		D3A6C6EB1CBD345F00A249E9 /* MumsnetChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetChat.swift; sourceTree = "<group>"; };
+		D3A6C6EC1CBD345F00A249E9 /* MumsnetChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetChatMessage.swift; sourceTree = "<group>"; };
 		D3A73CC11CBCF4B100384DEF /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D3A73CC21CBCF4B100384DEF /* BookmarkedPaginatedAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkedPaginatedAPIRequest.swift; sourceTree = "<group>"; };
 		D3A73CC31CBCF4B100384DEF /* EmoticonImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonImageDownloader.swift; sourceTree = "<group>"; };
@@ -266,10 +270,6 @@
 		D3A73CD41CBCF4B100384DEF /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		D3A73CD51CBCF4B100384DEF /* openQuote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openQuote@2x.png"; sourceTree = "<group>"; };
 		D3A73CD61CBCF4B100384DEF /* openQuote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openQuote@3x.png"; sourceTree = "<group>"; };
-		D3A73CD81CBCF4B100384DEF /* APIManager+Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIManager+Chat.swift"; sourceTree = "<group>"; };
-		D3A73CD91CBCF4B100384DEF /* ChatCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCache.swift; sourceTree = "<group>"; };
-		D3A73CDA1CBCF4B100384DEF /* MumsnetChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetChat.swift; sourceTree = "<group>"; };
-		D3A73CDB1CBCF4B100384DEF /* MumsnetChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetChatMessage.swift; sourceTree = "<group>"; };
 		D3A73CDD1CBCF4B100384DEF /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		D3A73CDE1CBCF4B100384DEF /* ConfigurationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationConstants.swift; sourceTree = "<group>"; };
 		D3A73CDF1CBCF4B100384DEF /* ErrorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
@@ -435,12 +435,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D3A6C6E81CBD345F00A249E9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D3A6C6E91CBD345F00A249E9 /* APIManager+Chat.swift */,
+				D3A6C6EA1CBD345F00A249E9 /* ChatCache.swift */,
+				D3A6C6EB1CBD345F00A249E9 /* MumsnetChat.swift */,
+				D3A6C6EC1CBD345F00A249E9 /* MumsnetChatMessage.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		D3A73CBF1CBCF4B100384DEF /* API */ = {
 			isa = PBXGroup;
 			children = (
 				D3A73CC01CBCF4B100384DEF /* API Wrapper */,
 				D3A73CD11CBCF4B100384DEF /* Assets */,
-				D3A73CD71CBCF4B100384DEF /* Chat */,
 				D3A73CDC1CBCF4B100384DEF /* Constants */,
 				D3A73CE51CBCF4B100384DEF /* Extensions */,
 				D3A73CFB1CBCF4B100384DEF /* Frameworks */,
@@ -493,17 +503,6 @@
 				D3A73CD61CBCF4B100384DEF /* openQuote@3x.png */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		D3A73CD71CBCF4B100384DEF /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CD81CBCF4B100384DEF /* APIManager+Chat.swift */,
-				D3A73CD91CBCF4B100384DEF /* ChatCache.swift */,
-				D3A73CDA1CBCF4B100384DEF /* MumsnetChat.swift */,
-				D3A73CDB1CBCF4B100384DEF /* MumsnetChatMessage.swift */,
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		D3A73CDC1CBCF4B100384DEF /* Constants */ = {
@@ -624,6 +623,7 @@
 		D3F2C97D1CAAE2BE003FA520 /* MumsnetChat */ = {
 			isa = PBXGroup;
 			children = (
+				D3A6C6E81CBD345F00A249E9 /* Chat */,
 				D372053C1CB3A8AB00BC59C6 /* Login */,
 				D33D66CF1CABDCE100364C53 /* ChatDetail */,
 				D33D66CE1CABDCD200364C53 /* ChatList */,
@@ -836,19 +836,20 @@
 				D3A73E041CBCF4B200384DEF /* MumsnetModelObjectLoading.swift in Sources */,
 				D3A73EE51CBCF4B200384DEF /* GlobalFunctions.swift in Sources */,
 				D3A73E061CBCF4B200384DEF /* TalkCache.swift in Sources */,
-				D3A73E0F1CBCF4B200384DEF /* MumsnetChatMessage.swift in Sources */,
 				D3A73E211CBCF4B200384DEF /* NSURL+MumsnetURLParsing.swift in Sources */,
+				D3A6C6ED1CBD345F00A249E9 /* APIManager+Chat.swift in Sources */,
 				D3A73DFC1CBCF4B200384DEF /* MumsnetDataCreate.swift in Sources */,
 				D3A73E021CBCF4B200384DEF /* MumsnetDataFlipping.swift in Sources */,
 				D3F2C9811CAAE2BE003FA520 /* ViewController.swift in Sources */,
 				D3A73EE01CBCF4B200384DEF /* Post.swift in Sources */,
 				D3A73E1E1CBCF4B200384DEF /* NSJSONSerialization+FallbackEncoding.swift in Sources */,
+				D3A6C6F01CBD345F00A249E9 /* MumsnetChatMessage.swift in Sources */,
+				D3A6C6EF1CBD345F00A249E9 /* MumsnetChat.swift in Sources */,
 				D3A73E221CBCF4B200384DEF /* NSURLConnection+JSON.swift in Sources */,
 				D303EF861CAD71640006130D /* SlidingDatasSource.swift in Sources */,
 				D3A73DFB1CBCF4B200384DEF /* MumsnetData.swift in Sources */,
 				D33D67021CAC09FE00364C53 /* ChatDataSource.swift in Sources */,
 				D3A73E231CBCF4B200384DEF /* NSURLRequest+MumsnetDefaults.swift in Sources */,
-				D3A73E0E1CBCF4B200384DEF /* MumsnetChat.swift in Sources */,
 				D303EF8D1CAD71D80006130D /* SendingStatusCollectionViewCell.swift in Sources */,
 				D3A73DFE1CBCF4B200384DEF /* MumsnetPaginatedData.swift in Sources */,
 				D303EF8F1CAD71D80006130D /* SendingStatusPresenter.swift in Sources */,
@@ -883,7 +884,6 @@
 				D3A73E2C1CBCF4B200384DEF /* UIFont+PreferredFontAdditions.swift in Sources */,
 				D3A73E191CBCF4B200384DEF /* NSAttributedString+MumsnetMarkdown.swift in Sources */,
 				D3A73EDC1CBCF4B200384DEF /* Error.swift in Sources */,
-				D3A73E0C1CBCF4B200384DEF /* APIManager+Chat.swift in Sources */,
 				D3A73E251CBCF4B200384DEF /* NSURLSessionConfiguration+MumsnetDefaults.swift in Sources */,
 				D3A73ED81CBCF4B200384DEF /* UserManager.swift in Sources */,
 				D37A9A4E1CB69CFB0002C4F0 /* Extenstions.swift in Sources */,
@@ -892,6 +892,7 @@
 				D3A73E291CBCF4B200384DEF /* String+URLEncoding.swift in Sources */,
 				D3A73E031CBCF4B200384DEF /* MumsnetDataPaginating.swift in Sources */,
 				D3A73EE41CBCF4B200384DEF /* User.swift in Sources */,
+				D3A6C6EE1CBD345F00A249E9 /* ChatCache.swift in Sources */,
 				D3A73DFA1CBCF4B200384DEF /* EmoticonImageDownloader.swift in Sources */,
 				D3A73DFD1CBCF4B200384DEF /* MumsnetDataDelete.swift in Sources */,
 				D3A73DF91CBCF4B200384DEF /* BookmarkedPaginatedAPIRequest.swift in Sources */,
@@ -903,7 +904,6 @@
 				D3A73EDB1CBCF4B200384DEF /* Emoticon.swift in Sources */,
 				D3A73E171CBCF4B200384DEF /* UserDefaultsConstants.swift in Sources */,
 				D33E4E161CB8102C005ED0AC /* ReadableDate.swift in Sources */,
-				D3A73E0D1CBCF4B200384DEF /* ChatCache.swift in Sources */,
 				D3A73E131CBCF4B200384DEF /* Fonts.swift in Sources */,
 				D3A73E2B1CBCF4B200384DEF /* String+YouTube.swift in Sources */,
 				D3A73EE11CBCF4B200384DEF /* RegistrationError.swift in Sources */,
