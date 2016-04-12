@@ -413,6 +413,7 @@
         <!--Navigation Controller-->
         <scene sceneID="frm-EL-K4C">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWO-jk-SHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v2J-0i-vaj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dhj-I0-jsB">
@@ -424,14 +425,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Aji-MQ-wi5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VWO-jk-SHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="439"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l04-2Z-AQF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Moy-lf-ltp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DummyNav" automaticallyAdjustsScrollViewInsets="NO" id="Moy-lf-ltp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k4Q-Ys-rFW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
