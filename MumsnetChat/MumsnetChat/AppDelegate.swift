@@ -31,10 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      Sets some constants required for keychain and API access
      */
     class func setUpAPIConstants() {
-        RegistrationKeychainIdentifier.Keychain = "com.mumsnet.app.registration"
-        RegistrationKeychainIdentifier.DataType = "mumsnetregistration"
-        LoginKeychainIdentifier.Keychain = "com.mumsnet.app"
-        LoginKeychainIdentifier.DataType = "mumsnetiosapp"
         MumsnetAPIAccessToken.ClientID = "e2c2cbcfb116aef33d4bfad38a6ac73e8bd1c064305264d8cbbf133ebfa0f21e"
         MumsnetAPIAccessToken.ClientSecret = "4896b155dc3915d5b156cbbd10faff25affeaa4a6cb1f68bc03de25c14060bc8"
         

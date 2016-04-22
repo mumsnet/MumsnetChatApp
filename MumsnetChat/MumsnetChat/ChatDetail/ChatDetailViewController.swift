@@ -9,6 +9,7 @@
 import UIKit
 import Chatto
 import ChattoAdditions
+import AudioToolbox
 
 class ChatDetailViewController: ChatViewController {
     
@@ -152,6 +153,10 @@ class ChatDetailViewController: ChatViewController {
                     
                 case ApiResult.Success(let chat):
                     self.setPlaceholder(nil)
+                    
+                    if self.shouldVibrateWithNewUpdatedChat(chat) {
+                        self.playVibrate()
+                    }
                     self.dataSource?.setupWithChat(chat)
                     
                 case ApiResult.Error(let errorResponse):
@@ -212,24 +217,21 @@ class ChatDetailViewController: ChatViewController {
         if let toUser = to, let fromUser = fromUser {
             if let message = message {
                 
-                APIManager.startChat([fromUser, toUser], message: message, completion: { (result:ApiResult<MumsnetChat>) in
-            
+                APIManager.startChat(fromUsername: fromUser, receiverUsernames: [toUser], message: message, completion: { (result:ApiResult<MumsnetChat>) in
+                    
                     self.setPlaceholder(nil)
-
+                    
                     switch result {
                     case ApiResult.Success(let chat):
                         
                         self.setupWithChat(chat)
                         self.refreshData()
-//                        self.chat = chat
-//                        self.showNewMessageBar(show: false, animated: true)
-//                        self.dataSource?.setupWithChat(chat)
                         
                     case ApiResult.Error(let errorResponse):
                         print(errorResponse.error)
                         // Show Error
                     }
-        })
+                })
             }
             else { // No message
                 // Show error
@@ -238,6 +240,29 @@ class ChatDetailViewController: ChatViewController {
         else { // No to user
             // Show error
         }
+    }
+    
+    func shouldVibrateWithNewUpdatedChat(chat:MumsnetChat) -> Bool {
+        
+        if let currentLastMessage = self.dataSource?.chat.lastMessage,
+            let newLastMessage = chat.lastMessage {
+            
+            // Is new last message
+            if currentLastMessage.objectID != newLastMessage.objectID {
+                
+                // Is from other person
+                if !newLastMessage.isMe {
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
+    
+    func playVibrate() {
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
     // MARK: - Chatto Protocols

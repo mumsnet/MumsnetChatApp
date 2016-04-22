@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AudioToolbox
+
 
 class ChatListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -90,8 +92,12 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func refreshTriggered() {
         
-        // Reset all content
-        self.reloadChats(pageToLoad: 1)
+        // Do not reload whilst the tableview is editing
+        if !self.tableView.editing {
+            
+            // Reset all content
+            self.reloadChats(pageToLoad: 1)
+        }
     }
     
     func reloadChats(pageToLoad page:Int) {
@@ -103,6 +109,10 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
             switch result {
                 
             case ApiResult.Success(let chats):
+                
+//                if self.shouldVibrateWithNewUpdatedChats(chats) {
+//                    self.playVibrate()
+//                }
                 self.chats = chats
                 
             case ApiResult.Error(let errorResponse):
@@ -129,6 +139,31 @@ class ChatListViewController: UIViewController, UITableViewDelegate, UITableView
                 print(errorResponse.error)
             }
         }
+    }
+    
+    func shouldVibrateWithNewUpdatedChats(chats:[MumsnetChat]) -> Bool {
+        
+        // If the first chat is unseen
+        if let firstChat = self.chats.first {
+            if firstChat.unreadMessages > 0 {
+                
+                // If the last message was < 5s ago
+                if let postedAt = firstChat.lastMessage?.postedAt {
+                    let secondsBefore = postedAt.secondsBeforeDate(NSDate())
+                    if secondsBefore < 10 {
+                        return true
+                    }
+                }
+                
+            }
+        }
+
+        return false
+    }
+    
+    func playVibrate() {
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
     // MARK: - Actions
