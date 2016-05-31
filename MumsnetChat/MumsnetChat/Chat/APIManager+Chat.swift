@@ -30,7 +30,7 @@ extension APIManager {
     static func fetchChat(chatID chatID:Int, completion:(ApiResult<MumsnetChat>) -> ()) {
         
         let urlString = MumsnetAPIEndPoint.FetchChatsEndPoint + "/\(chatID)"
-        let parameters:[String:AnyObject] = defaultParameter
+        let parameters:[String:AnyObject] = [:]
 //        parameters[MumsnetAPIParameter.ChatOrderParameter] = MumsnetAPIParameter.ChatOrderDescendingParameter
         
         manager.request(.GET, urlString, parameters: parameters, headers: authHeaders()).JSONHandler(completion) { (data) -> MumsnetChat? in
@@ -55,7 +55,7 @@ extension APIManager {
         
         let urlString = MumsnetAPIEndPoint.FetchChatsEndPoint
         
-        var parameters:[String:AnyObject] = defaultParameter
+        var parameters:[String:AnyObject] = [:]
         parameters[MumsnetAPIParameter.PageParameter] = page
         parameters[MumsnetAPIParameter.PerParameter] = APIManager.Constants.ChatPageDefaultSize
         
@@ -98,7 +98,7 @@ extension APIManager {
         
         let urlString = MumsnetAPIEndPoint.StartChatEndPoint
         
-        var parameters:[String:AnyObject] = defaultParameter
+        var parameters:[String:AnyObject] = [:]
         
         parameters[MumsnetAPIParameter.ChatSendingUsername] = fromUser
         parameters[MumsnetAPIParameter.ChatParticipantsParameter] = receiverUsernames
@@ -127,7 +127,7 @@ extension APIManager {
         
         let urlString = MumsnetAPIEndPoint.SendChatMessageEndPoint
         
-        var parameters:[String:AnyObject] = defaultParameter
+        var parameters:[String:AnyObject] = [:]
         parameters[MumsnetAPIParameter.ChatIDParameter] = chat.objectID
         parameters[MumsnetAPIParameter.ChatMessageParameter] = newMessage
         
@@ -153,7 +153,7 @@ extension APIManager {
         
         let urlString = MumsnetAPIEndPoint.DeleteChatEndPoint + "/\(chat.objectID)"
         
-        manager.request(.DELETE, urlString, parameters: defaultParameter, headers: authHeaders()).JSONHandler(completion)
+        manager.request(.DELETE, urlString, parameters: [:], headers: authHeaders()).JSONHandler(completion)
     }
     
     /**
@@ -166,7 +166,7 @@ extension APIManager {
         
         let urlString = MumsnetAPIEndPoint.DeleteChatMessageEndPoint + "/\(message.objectID)"
         
-        manager.request(.DELETE, urlString, parameters: defaultParameter, headers: authHeaders()).JSONHandler(completion)
+        manager.request(.DELETE, urlString, parameters: [:], headers: authHeaders()).JSONHandler(completion)
     }
     
     /**
@@ -180,7 +180,7 @@ extension APIManager {
     static func blockUserFromChat(username:String, completion:(ApiResult<Void>) -> ()) {
         
         let urlString = MumsnetAPIEndPoint.BlockChatUserEndPoint
-        var parameters:[String:AnyObject] = defaultParameter
+        var parameters:[String:AnyObject] = [:]
         parameters[MumsnetAPIParameter.UsernameParameter] = username
 
         manager.request(.POST, urlString, parameters: parameters, headers: authHeaders()).JSONHandler(completion)

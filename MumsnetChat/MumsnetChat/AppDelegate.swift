@@ -9,6 +9,10 @@
 import UIKit
 import ChattoAdditions
 import Chatto
+import FirebaseAnalytics
+import FirebaseInstanceID
+import FirebaseMessaging
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // SETUP API
         AppDelegate.setUpAPIConstants()
+        
+        self.setupPushNotification(application)
         
         
         
@@ -61,6 +67,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // Push Notifications
+    
+    func setupPushNotification(application:UIApplication) {
+        
+        // Register for remote notifications
+        let settings: UIUserNotificationSettings =
+            UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        
+        FIRApp.configure()
+    }
+    
+    func application(
+        application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [NSObject : AnyObject],
+                     fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        // If you are receiving a notification message while your app is in the background,
+        // this callback will not be fired till the user taps on the notification launching the application.
+        // TODO: Handle data of notification
+        
+        // Print message ID.
+        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        
+        // Print full message.
+        print("%@", userInfo)
+    }
 
+    
 }
+
 

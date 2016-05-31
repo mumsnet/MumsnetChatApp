@@ -20,7 +20,6 @@
 		D33D67021CAC09FE00364C53 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D67011CAC09FE00364C53 /* ChatDataSource.swift */; };
 		D33D67041CAC2CF400364C53 /* UserActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D67031CAC2CF400364C53 /* UserActionHandler.swift */; };
 		D33E4E161CB8102C005ED0AC /* ReadableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E4E151CB8102C005ED0AC /* ReadableDate.swift */; };
-		D33E4E211CB81477005ED0AC /* AFDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E4E201CB81477005ED0AC /* AFDateExtension.swift */; };
 		D37205461CB3A8CA00BC59C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37205451CB3A8CA00BC59C6 /* LoginViewController.swift */; };
 		D37A9A491CB69BBB0002C4F0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37A9A3C1CB69BB30002C4F0 /* Alamofire.framework */; };
 		D37A9A4A1CB69BBB0002C4F0 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D37A9A3C1CB69BB30002C4F0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -33,79 +32,101 @@
 		D3A6C6EE1CBD345F00A249E9 /* ChatCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6EA1CBD345F00A249E9 /* ChatCache.swift */; };
 		D3A6C6EF1CBD345F00A249E9 /* MumsnetChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6EB1CBD345F00A249E9 /* MumsnetChat.swift */; };
 		D3A6C6F01CBD345F00A249E9 /* MumsnetChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A6C6EC1CBD345F00A249E9 /* MumsnetChatMessage.swift */; };
-		D3A73DF81CBCF4B200384DEF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC11CBCF4B100384DEF /* APIRequest.swift */; };
-		D3A73DF91CBCF4B200384DEF /* BookmarkedPaginatedAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC21CBCF4B100384DEF /* BookmarkedPaginatedAPIRequest.swift */; };
-		D3A73DFA1CBCF4B200384DEF /* EmoticonImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC31CBCF4B100384DEF /* EmoticonImageDownloader.swift */; };
-		D3A73DFB1CBCF4B200384DEF /* MumsnetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC41CBCF4B100384DEF /* MumsnetData.swift */; };
-		D3A73DFC1CBCF4B200384DEF /* MumsnetDataCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC51CBCF4B100384DEF /* MumsnetDataCreate.swift */; };
-		D3A73DFD1CBCF4B200384DEF /* MumsnetDataDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC61CBCF4B100384DEF /* MumsnetDataDelete.swift */; };
-		D3A73DFE1CBCF4B200384DEF /* MumsnetPaginatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC71CBCF4B100384DEF /* MumsnetPaginatedData.swift */; };
-		D3A73DFF1CBCF4B200384DEF /* PaginatedAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CC81CBCF4B100384DEF /* PaginatedAPIRequest.swift */; };
-		D3A73E001CBCF4B200384DEF /* MumsnetDataCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CCA1CBCF4B100384DEF /* MumsnetDataCreating.swift */; };
-		D3A73E011CBCF4B200384DEF /* MumsnetDataDeleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CCB1CBCF4B100384DEF /* MumsnetDataDeleting.swift */; };
-		D3A73E021CBCF4B200384DEF /* MumsnetDataFlipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CCC1CBCF4B100384DEF /* MumsnetDataFlipping.swift */; };
-		D3A73E031CBCF4B200384DEF /* MumsnetDataPaginating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CCD1CBCF4B100384DEF /* MumsnetDataPaginating.swift */; };
-		D3A73E041CBCF4B200384DEF /* MumsnetModelObjectLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CCE1CBCF4B100384DEF /* MumsnetModelObjectLoading.swift */; };
-		D3A73E051CBCF4B200384DEF /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CCF1CBCF4B100384DEF /* Registration.swift */; };
-		D3A73E061CBCF4B200384DEF /* TalkCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CD01CBCF4B100384DEF /* TalkCache.swift */; };
-		D3A73E071CBCF4B200384DEF /* closeQuote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD21CBCF4B100384DEF /* closeQuote@2x.png */; };
-		D3A73E081CBCF4B200384DEF /* closeQuote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD31CBCF4B100384DEF /* closeQuote@3x.png */; };
-		D3A73E091CBCF4B200384DEF /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD41CBCF4B100384DEF /* icomoon.ttf */; };
-		D3A73E0A1CBCF4B200384DEF /* openQuote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD51CBCF4B100384DEF /* openQuote@2x.png */; };
-		D3A73E0B1CBCF4B200384DEF /* openQuote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A73CD61CBCF4B100384DEF /* openQuote@3x.png */; };
-		D3A73E101CBCF4B200384DEF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDD1CBCF4B100384DEF /* APIConstants.swift */; };
-		D3A73E111CBCF4B200384DEF /* ConfigurationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDE1CBCF4B100384DEF /* ConfigurationConstants.swift */; };
-		D3A73E121CBCF4B200384DEF /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CDF1CBCF4B100384DEF /* ErrorConstants.swift */; };
-		D3A73E131CBCF4B200384DEF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE01CBCF4B100384DEF /* Fonts.swift */; };
-		D3A73E141CBCF4B200384DEF /* JSONConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE11CBCF4B100384DEF /* JSONConstants.swift */; };
-		D3A73E151CBCF4B200384DEF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE21CBCF4B100384DEF /* Notifications.swift */; };
-		D3A73E161CBCF4B200384DEF /* RegularExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE31CBCF4B100384DEF /* RegularExpressions.swift */; };
-		D3A73E171CBCF4B200384DEF /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE41CBCF4B100384DEF /* UserDefaultsConstants.swift */; };
-		D3A73E181CBCF4B200384DEF /* Array+MumsnetModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE61CBCF4B100384DEF /* Array+MumsnetModelObject.swift */; };
-		D3A73E191CBCF4B200384DEF /* NSAttributedString+MumsnetMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE71CBCF4B100384DEF /* NSAttributedString+MumsnetMarkdown.swift */; };
-		D3A73E1A1CBCF4B200384DEF /* NSData+MumsnetAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE81CBCF4B100384DEF /* NSData+MumsnetAdditions.swift */; };
-		D3A73E1B1CBCF4B200384DEF /* NSDate+TimeChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CE91CBCF4B100384DEF /* NSDate+TimeChecking.swift */; };
-		D3A73E1C1CBCF4B200384DEF /* NSDateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CEA1CBCF4B100384DEF /* NSDateFormatter+ISO8601.swift */; };
-		D3A73E1D1CBCF4B200384DEF /* NSFileManager+DirectoryCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CEB1CBCF4B100384DEF /* NSFileManager+DirectoryCreation.swift */; };
-		D3A73E1E1CBCF4B200384DEF /* NSJSONSerialization+FallbackEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CEC1CBCF4B100384DEF /* NSJSONSerialization+FallbackEncoding.swift */; };
-		D3A73E1F1CBCF4B200384DEF /* NSMutableString+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CED1CBCF4B100384DEF /* NSMutableString+Regex.swift */; };
-		D3A73E201CBCF4B200384DEF /* NSNotificationCenter+MumsnetNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CEE1CBCF4B100384DEF /* NSNotificationCenter+MumsnetNotifications.swift */; };
-		D3A73E211CBCF4B200384DEF /* NSURL+MumsnetURLParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CEF1CBCF4B100384DEF /* NSURL+MumsnetURLParsing.swift */; };
-		D3A73E221CBCF4B200384DEF /* NSURLConnection+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF01CBCF4B100384DEF /* NSURLConnection+JSON.swift */; };
-		D3A73E231CBCF4B200384DEF /* NSURLRequest+MumsnetDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF11CBCF4B100384DEF /* NSURLRequest+MumsnetDefaults.swift */; };
-		D3A73E241CBCF4B200384DEF /* NSURLSession+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF21CBCF4B100384DEF /* NSURLSession+JSON.swift */; };
-		D3A73E251CBCF4B200384DEF /* NSURLSessionConfiguration+MumsnetDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF31CBCF4B100384DEF /* NSURLSessionConfiguration+MumsnetDefaults.swift */; };
-		D3A73E261CBCF4B200384DEF /* NSUserDefaults+MumsnetPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF41CBCF4B100384DEF /* NSUserDefaults+MumsnetPreferences.swift */; };
-		D3A73E271CBCF4B200384DEF /* String+MumsnetMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF51CBCF4B100384DEF /* String+MumsnetMarkdown.swift */; };
-		D3A73E281CBCF4B200384DEF /* String+Trimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF61CBCF4B100384DEF /* String+Trimming.swift */; };
-		D3A73E291CBCF4B200384DEF /* String+URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF71CBCF4B100384DEF /* String+URLEncoding.swift */; };
-		D3A73E2A1CBCF4B200384DEF /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF81CBCF4B100384DEF /* String+Validation.swift */; };
-		D3A73E2B1CBCF4B200384DEF /* String+YouTube.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CF91CBCF4B100384DEF /* String+YouTube.swift */; };
-		D3A73E2C1CBCF4B200384DEF /* UIFont+PreferredFontAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CFA1CBCF4B100384DEF /* UIFont+PreferredFontAdditions.swift */; };
-		D3A73E2D1CBCF4B200384DEF /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73CFC1CBCF4B100384DEF /* AES256CBC.swift */; };
-		D3A73ED51CBCF4B200384DEF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE21CBCF4B100384DEF /* APIManager.swift */; };
-		D3A73ED61CBCF4B200384DEF /* EncryptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE31CBCF4B100384DEF /* EncryptionManager.swift */; };
-		D3A73ED71CBCF4B200384DEF /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE41CBCF4B100384DEF /* FileManager.swift */; };
-		D3A73ED81CBCF4B200384DEF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE51CBCF4B100384DEF /* UserManager.swift */; };
-		D3A73ED91CBCF4B200384DEF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE71CBCF4B200384DEF /* APIError.swift */; };
-		D3A73EDA1CBCF4B200384DEF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE81CBCF4B200384DEF /* Category.swift */; };
-		D3A73EDB1CBCF4B200384DEF /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DE91CBCF4B200384DEF /* Emoticon.swift */; };
-		D3A73EDC1CBCF4B200384DEF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DEA1CBCF4B200384DEF /* Error.swift */; };
-		D3A73EDD1CBCF4B200384DEF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DEB1CBCF4B200384DEF /* Image.swift */; };
-		D3A73EDE1CBCF4B200384DEF /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DEC1CBCF4B200384DEF /* ModelObject.swift */; };
-		D3A73EDF1CBCF4B200384DEF /* Newsletter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DED1CBCF4B200384DEF /* Newsletter.swift */; };
-		D3A73EE01CBCF4B200384DEF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DEE1CBCF4B200384DEF /* Post.swift */; };
-		D3A73EE11CBCF4B200384DEF /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DEF1CBCF4B200384DEF /* RegistrationError.swift */; };
-		D3A73EE21CBCF4B200384DEF /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DF01CBCF4B200384DEF /* Thread.swift */; };
-		D3A73EE31CBCF4B200384DEF /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DF11CBCF4B200384DEF /* Topic.swift */; };
-		D3A73EE41CBCF4B200384DEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DF21CBCF4B200384DEF /* User.swift */; };
-		D3A73EE51CBCF4B200384DEF /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DF61CBCF4B200384DEF /* GlobalFunctions.swift */; };
-		D3A73EE61CBCF4B200384DEF /* MumsnetCustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A73DF71CBCF4B200384DEF /* MumsnetCustomError.swift */; };
 		D3F2C97F1CAAE2BE003FA520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2C97E1CAAE2BE003FA520 /* AppDelegate.swift */; };
 		D3F2C9811CAAE2BE003FA520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2C9801CAAE2BE003FA520 /* ViewController.swift */; };
 		D3F2C9841CAAE2BE003FA520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F2C9821CAAE2BE003FA520 /* Main.storyboard */; };
 		D3F2C9861CAAE2BE003FA520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F2C9851CAAE2BE003FA520 /* Assets.xcassets */; };
 		D3F2C9891CAAE2BE003FA520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F2C9871CAAE2BE003FA520 /* LaunchScreen.storyboard */; };
+		D3F6CDAA1CF4442D0004FCBF /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD741CF4442D0004FCBF /* FirebaseAnalytics.framework */; };
+		D3F6CDAB1CF4442D0004FCBF /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD751CF4442D0004FCBF /* FirebaseInstanceID.framework */; };
+		D3F6CDAC1CF4442D0004FCBF /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD761CF4442D0004FCBF /* GoogleInterchangeUtilities.framework */; };
+		D3F6CDAD1CF4442D0004FCBF /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD771CF4442D0004FCBF /* GoogleSymbolUtilities.framework */; };
+		D3F6CDAE1CF4442D0004FCBF /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD781CF4442D0004FCBF /* GoogleUtilities.framework */; };
+		D3F6CDC91CF4442E0004FCBF /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD9E1CF4442D0004FCBF /* FirebaseMessaging.framework */; };
+		D3F6CDCA1CF4442E0004FCBF /* GoogleIPhoneUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CD9F1CF4442D0004FCBF /* GoogleIPhoneUtilities.framework */; };
+		D3F6CDCB1CF4442E0004FCBF /* NOTICES in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CDA11CF4442D0004FCBF /* NOTICES */; };
+		D3F6CDCC1CF4442E0004FCBF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CDA21CF4442D0004FCBF /* README.md */; };
+		D3F6CEC01CF44B1E0004FCBF /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE711CF44B1E0004FCBF /* APIRequest.swift */; };
+		D3F6CEC11CF44B1E0004FCBF /* BookmarkedPaginatedAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE721CF44B1E0004FCBF /* BookmarkedPaginatedAPIRequest.swift */; };
+		D3F6CEC21CF44B1E0004FCBF /* EmoticonImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE731CF44B1E0004FCBF /* EmoticonImageDownloader.swift */; };
+		D3F6CEC31CF44B1E0004FCBF /* MumsnetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE741CF44B1E0004FCBF /* MumsnetData.swift */; };
+		D3F6CEC41CF44B1E0004FCBF /* MumsnetDataCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE751CF44B1E0004FCBF /* MumsnetDataCreate.swift */; };
+		D3F6CEC51CF44B1E0004FCBF /* MumsnetDataDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE761CF44B1E0004FCBF /* MumsnetDataDelete.swift */; };
+		D3F6CEC61CF44B1E0004FCBF /* MumsnetPaginatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE771CF44B1E0004FCBF /* MumsnetPaginatedData.swift */; };
+		D3F6CEC71CF44B1E0004FCBF /* PaginatedAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE781CF44B1E0004FCBF /* PaginatedAPIRequest.swift */; };
+		D3F6CEC81CF44B1E0004FCBF /* MumsnetDataCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE7A1CF44B1E0004FCBF /* MumsnetDataCreating.swift */; };
+		D3F6CEC91CF44B1E0004FCBF /* MumsnetDataDeleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE7B1CF44B1E0004FCBF /* MumsnetDataDeleting.swift */; };
+		D3F6CECA1CF44B1E0004FCBF /* MumsnetDataFlipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE7C1CF44B1E0004FCBF /* MumsnetDataFlipping.swift */; };
+		D3F6CECB1CF44B1E0004FCBF /* MumsnetDataPaginating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE7D1CF44B1E0004FCBF /* MumsnetDataPaginating.swift */; };
+		D3F6CECC1CF44B1E0004FCBF /* MumsnetModelObjectLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE7E1CF44B1E0004FCBF /* MumsnetModelObjectLoading.swift */; };
+		D3F6CECD1CF44B1E0004FCBF /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE7F1CF44B1E0004FCBF /* Registration.swift */; };
+		D3F6CECE1CF44B1E0004FCBF /* TalkCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE801CF44B1E0004FCBF /* TalkCache.swift */; };
+		D3F6CECF1CF44B1E0004FCBF /* closeQuote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CE821CF44B1E0004FCBF /* closeQuote@2x.png */; };
+		D3F6CED01CF44B1E0004FCBF /* closeQuote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CE831CF44B1E0004FCBF /* closeQuote@3x.png */; };
+		D3F6CED11CF44B1E0004FCBF /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CE841CF44B1E0004FCBF /* icomoon.ttf */; };
+		D3F6CED21CF44B1E0004FCBF /* openQuote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CE851CF44B1E0004FCBF /* openQuote@2x.png */; };
+		D3F6CED31CF44B1E0004FCBF /* openQuote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CE861CF44B1E0004FCBF /* openQuote@3x.png */; };
+		D3F6CED41CF44B1E0004FCBF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE881CF44B1E0004FCBF /* APIConstants.swift */; };
+		D3F6CED51CF44B1E0004FCBF /* ConfigurationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE891CF44B1E0004FCBF /* ConfigurationConstants.swift */; };
+		D3F6CED61CF44B1E0004FCBF /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE8A1CF44B1E0004FCBF /* ErrorConstants.swift */; };
+		D3F6CED71CF44B1E0004FCBF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE8B1CF44B1E0004FCBF /* Fonts.swift */; };
+		D3F6CED81CF44B1E0004FCBF /* JSONConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE8C1CF44B1E0004FCBF /* JSONConstants.swift */; };
+		D3F6CED91CF44B1E0004FCBF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE8D1CF44B1E0004FCBF /* Notifications.swift */; };
+		D3F6CEDA1CF44B1F0004FCBF /* RegularExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE8E1CF44B1E0004FCBF /* RegularExpressions.swift */; };
+		D3F6CEDB1CF44B1F0004FCBF /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE8F1CF44B1E0004FCBF /* UserDefaultsConstants.swift */; };
+		D3F6CEDC1CF44B1F0004FCBF /* AFDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE911CF44B1E0004FCBF /* AFDateExtension.swift */; };
+		D3F6CEDD1CF44B1F0004FCBF /* Array+MumsnetModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE921CF44B1E0004FCBF /* Array+MumsnetModelObject.swift */; };
+		D3F6CEDE1CF44B1F0004FCBF /* NSAttributedString+MumsnetMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE931CF44B1E0004FCBF /* NSAttributedString+MumsnetMarkdown.swift */; };
+		D3F6CEDF1CF44B1F0004FCBF /* NSData+MumsnetAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE941CF44B1E0004FCBF /* NSData+MumsnetAdditions.swift */; };
+		D3F6CEE01CF44B1F0004FCBF /* NSDate+TimeChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE951CF44B1E0004FCBF /* NSDate+TimeChecking.swift */; };
+		D3F6CEE11CF44B1F0004FCBF /* NSDateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE961CF44B1E0004FCBF /* NSDateFormatter+ISO8601.swift */; };
+		D3F6CEE21CF44B1F0004FCBF /* NSFileManager+DirectoryCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE971CF44B1E0004FCBF /* NSFileManager+DirectoryCreation.swift */; };
+		D3F6CEE31CF44B1F0004FCBF /* NSJSONSerialization+FallbackEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE981CF44B1E0004FCBF /* NSJSONSerialization+FallbackEncoding.swift */; };
+		D3F6CEE41CF44B1F0004FCBF /* NSMutableString+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE991CF44B1E0004FCBF /* NSMutableString+Regex.swift */; };
+		D3F6CEE51CF44B1F0004FCBF /* NSNotificationCenter+MumsnetNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE9A1CF44B1E0004FCBF /* NSNotificationCenter+MumsnetNotifications.swift */; };
+		D3F6CEE61CF44B1F0004FCBF /* NSURL+MumsnetURLParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE9B1CF44B1E0004FCBF /* NSURL+MumsnetURLParsing.swift */; };
+		D3F6CEE71CF44B1F0004FCBF /* NSURLConnection+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE9C1CF44B1E0004FCBF /* NSURLConnection+JSON.swift */; };
+		D3F6CEE81CF44B1F0004FCBF /* NSURLRequest+MumsnetDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE9D1CF44B1E0004FCBF /* NSURLRequest+MumsnetDefaults.swift */; };
+		D3F6CEE91CF44B1F0004FCBF /* NSURLSession+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE9E1CF44B1E0004FCBF /* NSURLSession+JSON.swift */; };
+		D3F6CEEA1CF44B1F0004FCBF /* NSURLSessionConfiguration+MumsnetDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CE9F1CF44B1E0004FCBF /* NSURLSessionConfiguration+MumsnetDefaults.swift */; };
+		D3F6CEEB1CF44B1F0004FCBF /* NSUserDefaults+MumsnetPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA01CF44B1E0004FCBF /* NSUserDefaults+MumsnetPreferences.swift */; };
+		D3F6CEEC1CF44B1F0004FCBF /* String+MumsnetMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA11CF44B1E0004FCBF /* String+MumsnetMarkdown.swift */; };
+		D3F6CEED1CF44B1F0004FCBF /* String+Trimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA21CF44B1E0004FCBF /* String+Trimming.swift */; };
+		D3F6CEEE1CF44B1F0004FCBF /* String+URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA31CF44B1E0004FCBF /* String+URLEncoding.swift */; };
+		D3F6CEEF1CF44B1F0004FCBF /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA41CF44B1E0004FCBF /* String+Validation.swift */; };
+		D3F6CEF01CF44B1F0004FCBF /* String+YouTube.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA51CF44B1E0004FCBF /* String+YouTube.swift */; };
+		D3F6CEF11CF44B1F0004FCBF /* UIFont+PreferredFontAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA61CF44B1E0004FCBF /* UIFont+PreferredFontAdditions.swift */; };
+		D3F6CEF21CF44B1F0004FCBF /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEA81CF44B1E0004FCBF /* AES256CBC.swift */; };
+		D3F6CEF31CF44B1F0004FCBF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEAA1CF44B1E0004FCBF /* APIManager.swift */; };
+		D3F6CEF41CF44B1F0004FCBF /* EncryptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEAB1CF44B1E0004FCBF /* EncryptionManager.swift */; };
+		D3F6CEF51CF44B1F0004FCBF /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEAC1CF44B1E0004FCBF /* FileManager.swift */; };
+		D3F6CEF61CF44B1F0004FCBF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEAD1CF44B1E0004FCBF /* UserManager.swift */; };
+		D3F6CEF71CF44B1F0004FCBF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEAF1CF44B1E0004FCBF /* APIError.swift */; };
+		D3F6CEF81CF44B1F0004FCBF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB01CF44B1E0004FCBF /* Category.swift */; };
+		D3F6CEF91CF44B1F0004FCBF /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB11CF44B1E0004FCBF /* Emoticon.swift */; };
+		D3F6CEFA1CF44B1F0004FCBF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB21CF44B1E0004FCBF /* Error.swift */; };
+		D3F6CEFB1CF44B1F0004FCBF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB31CF44B1E0004FCBF /* Image.swift */; };
+		D3F6CEFC1CF44B1F0004FCBF /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB41CF44B1E0004FCBF /* ModelObject.swift */; };
+		D3F6CEFD1CF44B1F0004FCBF /* Newsletter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB51CF44B1E0004FCBF /* Newsletter.swift */; };
+		D3F6CEFE1CF44B1F0004FCBF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB61CF44B1E0004FCBF /* Post.swift */; };
+		D3F6CEFF1CF44B1F0004FCBF /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB71CF44B1E0004FCBF /* RegistrationError.swift */; };
+		D3F6CF001CF44B1F0004FCBF /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB81CF44B1E0004FCBF /* Thread.swift */; };
+		D3F6CF011CF44B1F0004FCBF /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEB91CF44B1E0004FCBF /* Topic.swift */; };
+		D3F6CF021CF44B1F0004FCBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEBA1CF44B1E0004FCBF /* User.swift */; };
+		D3F6CF031CF44B1F0004FCBF /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEBE1CF44B1E0004FCBF /* GlobalFunctions.swift */; };
+		D3F6CF041CF44B1F0004FCBF /* MumsnetCustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6CEBF1CF44B1E0004FCBF /* MumsnetCustomError.swift */; };
+		D3F6CF081CF4602F0004FCBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F6CF071CF4602F0004FCBF /* GoogleService-Info.plist */; };
+		D3F6CF0A1CF461A90004FCBF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF091CF461A90004FCBF /* MessageUI.framework */; };
+		D3F6CF0C1CF461B40004FCBF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF0B1CF461B40004FCBF /* AddressBook.framework */; };
+		D3F6CF0E1CF461C50004FCBF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF0D1CF461C50004FCBF /* CoreTelephony.framework */; };
+		D3F6CF101CF461ED0004FCBF /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF0F1CF461ED0004FCBF /* libicucore.tbd */; };
+		D3F6CF121CF461FD0004FCBF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF111CF461FD0004FCBF /* libc++.tbd */; };
+		D3F6CF141CF4620E0004FCBF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF131CF4620E0004FCBF /* Security.framework */; };
+		D3F6CF161CF462130004FCBF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF151CF462130004FCBF /* CFNetwork.framework */; };
+		D3F6CF181CF462210004FCBF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF171CF462210004FCBF /* SystemConfiguration.framework */; };
+		D3F6CF1A1CF462730004FCBF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF191CF462730004FCBF /* CoreBluetooth.framework */; };
+		D3F6CF1C1CF462E30004FCBF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF1B1CF462E30004FCBF /* libz.tbd */; };
+		D3F6CF1E1CF463110004FCBF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F6CF1D1CF463110004FCBF /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,7 +262,6 @@
 		D33D67011CAC09FE00364C53 /* ChatDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatDataSource.swift; path = ChatDetail/ChatDataSource.swift; sourceTree = "<group>"; };
 		D33D67031CAC2CF400364C53 /* UserActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserActionHandler.swift; path = ChatDetail/UserActionHandler.swift; sourceTree = "<group>"; };
 		D33E4E151CB8102C005ED0AC /* ReadableDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadableDate.swift; sourceTree = "<group>"; };
-		D33E4E201CB81477005ED0AC /* AFDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDateExtension.swift; sourceTree = "<group>"; };
 		D37205451CB3A8CA00BC59C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		D37A9A4D1CB69CFB0002C4F0 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		D3A6C6CD1CBCF5B700A249E9 /* Chatto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Chatto.xcodeproj; path = Chatto/Chatto.xcodeproj; sourceTree = "<group>"; };
@@ -250,75 +270,6 @@
 		D3A6C6EA1CBD345F00A249E9 /* ChatCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCache.swift; sourceTree = "<group>"; };
 		D3A6C6EB1CBD345F00A249E9 /* MumsnetChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetChat.swift; sourceTree = "<group>"; };
 		D3A6C6EC1CBD345F00A249E9 /* MumsnetChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetChatMessage.swift; sourceTree = "<group>"; };
-		D3A73CC11CBCF4B100384DEF /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		D3A73CC21CBCF4B100384DEF /* BookmarkedPaginatedAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkedPaginatedAPIRequest.swift; sourceTree = "<group>"; };
-		D3A73CC31CBCF4B100384DEF /* EmoticonImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonImageDownloader.swift; sourceTree = "<group>"; };
-		D3A73CC41CBCF4B100384DEF /* MumsnetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetData.swift; sourceTree = "<group>"; };
-		D3A73CC51CBCF4B100384DEF /* MumsnetDataCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataCreate.swift; sourceTree = "<group>"; };
-		D3A73CC61CBCF4B100384DEF /* MumsnetDataDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataDelete.swift; sourceTree = "<group>"; };
-		D3A73CC71CBCF4B100384DEF /* MumsnetPaginatedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetPaginatedData.swift; sourceTree = "<group>"; };
-		D3A73CC81CBCF4B100384DEF /* PaginatedAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatedAPIRequest.swift; sourceTree = "<group>"; };
-		D3A73CCA1CBCF4B100384DEF /* MumsnetDataCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataCreating.swift; sourceTree = "<group>"; };
-		D3A73CCB1CBCF4B100384DEF /* MumsnetDataDeleting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataDeleting.swift; sourceTree = "<group>"; };
-		D3A73CCC1CBCF4B100384DEF /* MumsnetDataFlipping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataFlipping.swift; sourceTree = "<group>"; };
-		D3A73CCD1CBCF4B100384DEF /* MumsnetDataPaginating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataPaginating.swift; sourceTree = "<group>"; };
-		D3A73CCE1CBCF4B100384DEF /* MumsnetModelObjectLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetModelObjectLoading.swift; sourceTree = "<group>"; };
-		D3A73CCF1CBCF4B100384DEF /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
-		D3A73CD01CBCF4B100384DEF /* TalkCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCache.swift; sourceTree = "<group>"; };
-		D3A73CD21CBCF4B100384DEF /* closeQuote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeQuote@2x.png"; sourceTree = "<group>"; };
-		D3A73CD31CBCF4B100384DEF /* closeQuote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeQuote@3x.png"; sourceTree = "<group>"; };
-		D3A73CD41CBCF4B100384DEF /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
-		D3A73CD51CBCF4B100384DEF /* openQuote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openQuote@2x.png"; sourceTree = "<group>"; };
-		D3A73CD61CBCF4B100384DEF /* openQuote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openQuote@3x.png"; sourceTree = "<group>"; };
-		D3A73CDD1CBCF4B100384DEF /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		D3A73CDE1CBCF4B100384DEF /* ConfigurationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationConstants.swift; sourceTree = "<group>"; };
-		D3A73CDF1CBCF4B100384DEF /* ErrorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
-		D3A73CE01CBCF4B100384DEF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		D3A73CE11CBCF4B100384DEF /* JSONConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConstants.swift; sourceTree = "<group>"; };
-		D3A73CE21CBCF4B100384DEF /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		D3A73CE31CBCF4B100384DEF /* RegularExpressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressions.swift; sourceTree = "<group>"; };
-		D3A73CE41CBCF4B100384DEF /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
-		D3A73CE61CBCF4B100384DEF /* Array+MumsnetModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MumsnetModelObject.swift"; sourceTree = "<group>"; };
-		D3A73CE71CBCF4B100384DEF /* NSAttributedString+MumsnetMarkdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+MumsnetMarkdown.swift"; sourceTree = "<group>"; };
-		D3A73CE81CBCF4B100384DEF /* NSData+MumsnetAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+MumsnetAdditions.swift"; sourceTree = "<group>"; };
-		D3A73CE91CBCF4B100384DEF /* NSDate+TimeChecking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+TimeChecking.swift"; sourceTree = "<group>"; };
-		D3A73CEA1CBCF4B100384DEF /* NSDateFormatter+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
-		D3A73CEB1CBCF4B100384DEF /* NSFileManager+DirectoryCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+DirectoryCreation.swift"; sourceTree = "<group>"; };
-		D3A73CEC1CBCF4B100384DEF /* NSJSONSerialization+FallbackEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSJSONSerialization+FallbackEncoding.swift"; sourceTree = "<group>"; };
-		D3A73CED1CBCF4B100384DEF /* NSMutableString+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableString+Regex.swift"; sourceTree = "<group>"; };
-		D3A73CEE1CBCF4B100384DEF /* NSNotificationCenter+MumsnetNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MumsnetNotifications.swift"; sourceTree = "<group>"; };
-		D3A73CEF1CBCF4B100384DEF /* NSURL+MumsnetURLParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+MumsnetURLParsing.swift"; sourceTree = "<group>"; };
-		D3A73CF01CBCF4B100384DEF /* NSURLConnection+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLConnection+JSON.swift"; sourceTree = "<group>"; };
-		D3A73CF11CBCF4B100384DEF /* NSURLRequest+MumsnetDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+MumsnetDefaults.swift"; sourceTree = "<group>"; };
-		D3A73CF21CBCF4B100384DEF /* NSURLSession+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+JSON.swift"; sourceTree = "<group>"; };
-		D3A73CF31CBCF4B100384DEF /* NSURLSessionConfiguration+MumsnetDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSessionConfiguration+MumsnetDefaults.swift"; sourceTree = "<group>"; };
-		D3A73CF41CBCF4B100384DEF /* NSUserDefaults+MumsnetPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+MumsnetPreferences.swift"; sourceTree = "<group>"; };
-		D3A73CF51CBCF4B100384DEF /* String+MumsnetMarkdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MumsnetMarkdown.swift"; sourceTree = "<group>"; };
-		D3A73CF61CBCF4B100384DEF /* String+Trimming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Trimming.swift"; sourceTree = "<group>"; };
-		D3A73CF71CBCF4B100384DEF /* String+URLEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLEncoding.swift"; sourceTree = "<group>"; };
-		D3A73CF81CBCF4B100384DEF /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
-		D3A73CF91CBCF4B100384DEF /* String+YouTube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+YouTube.swift"; sourceTree = "<group>"; };
-		D3A73CFA1CBCF4B100384DEF /* UIFont+PreferredFontAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFontAdditions.swift"; sourceTree = "<group>"; };
-		D3A73CFC1CBCF4B100384DEF /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES256CBC.swift; sourceTree = "<group>"; };
-		D3A73DE21CBCF4B100384DEF /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		D3A73DE31CBCF4B100384DEF /* EncryptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionManager.swift; sourceTree = "<group>"; };
-		D3A73DE41CBCF4B100384DEF /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		D3A73DE51CBCF4B100384DEF /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		D3A73DE71CBCF4B200384DEF /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		D3A73DE81CBCF4B200384DEF /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		D3A73DE91CBCF4B200384DEF /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
-		D3A73DEA1CBCF4B200384DEF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		D3A73DEB1CBCF4B200384DEF /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		D3A73DEC1CBCF4B200384DEF /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
-		D3A73DED1CBCF4B200384DEF /* Newsletter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Newsletter.swift; sourceTree = "<group>"; };
-		D3A73DEE1CBCF4B200384DEF /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		D3A73DEF1CBCF4B200384DEF /* RegistrationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
-		D3A73DF01CBCF4B200384DEF /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
-		D3A73DF11CBCF4B200384DEF /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
-		D3A73DF21CBCF4B200384DEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D3A73DF41CBCF4B200384DEF /* TalkFramework-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TalkFramework-Bridging-Header.h"; sourceTree = "<group>"; };
-		D3A73DF61CBCF4B200384DEF /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
-		D3A73DF71CBCF4B200384DEF /* MumsnetCustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetCustomError.swift; sourceTree = "<group>"; };
 		D3F2C97B1CAAE2BD003FA520 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F2C97E1CAAE2BE003FA520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F2C9801CAAE2BE003FA520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +277,99 @@
 		D3F2C9851CAAE2BE003FA520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3F2C9881CAAE2BE003FA520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3F2C98A1CAAE2BE003FA520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F6CD741CF4442D0004FCBF /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		D3F6CD751CF4442D0004FCBF /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		D3F6CD761CF4442D0004FCBF /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		D3F6CD771CF4442D0004FCBF /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		D3F6CD781CF4442D0004FCBF /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		D3F6CD8F1CF4442D0004FCBF /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = FireBase/Firebase.h; sourceTree = "<group>"; };
+		D3F6CD9E1CF4442D0004FCBF /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
+		D3F6CD9F1CF4442D0004FCBF /* GoogleIPhoneUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleIPhoneUtilities.framework; sourceTree = "<group>"; };
+		D3F6CDA01CF4442D0004FCBF /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = FireBase/module.modulemap; sourceTree = "<group>"; };
+		D3F6CDA11CF4442D0004FCBF /* NOTICES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NOTICES; path = FireBase/NOTICES; sourceTree = "<group>"; };
+		D3F6CDA21CF4442D0004FCBF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = FireBase/README.md; sourceTree = "<group>"; };
+		D3F6CE711CF44B1E0004FCBF /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D3F6CE721CF44B1E0004FCBF /* BookmarkedPaginatedAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkedPaginatedAPIRequest.swift; sourceTree = "<group>"; };
+		D3F6CE731CF44B1E0004FCBF /* EmoticonImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonImageDownloader.swift; sourceTree = "<group>"; };
+		D3F6CE741CF44B1E0004FCBF /* MumsnetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetData.swift; sourceTree = "<group>"; };
+		D3F6CE751CF44B1E0004FCBF /* MumsnetDataCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataCreate.swift; sourceTree = "<group>"; };
+		D3F6CE761CF44B1E0004FCBF /* MumsnetDataDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataDelete.swift; sourceTree = "<group>"; };
+		D3F6CE771CF44B1E0004FCBF /* MumsnetPaginatedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetPaginatedData.swift; sourceTree = "<group>"; };
+		D3F6CE781CF44B1E0004FCBF /* PaginatedAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatedAPIRequest.swift; sourceTree = "<group>"; };
+		D3F6CE7A1CF44B1E0004FCBF /* MumsnetDataCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataCreating.swift; sourceTree = "<group>"; };
+		D3F6CE7B1CF44B1E0004FCBF /* MumsnetDataDeleting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataDeleting.swift; sourceTree = "<group>"; };
+		D3F6CE7C1CF44B1E0004FCBF /* MumsnetDataFlipping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataFlipping.swift; sourceTree = "<group>"; };
+		D3F6CE7D1CF44B1E0004FCBF /* MumsnetDataPaginating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetDataPaginating.swift; sourceTree = "<group>"; };
+		D3F6CE7E1CF44B1E0004FCBF /* MumsnetModelObjectLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetModelObjectLoading.swift; sourceTree = "<group>"; };
+		D3F6CE7F1CF44B1E0004FCBF /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		D3F6CE801CF44B1E0004FCBF /* TalkCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCache.swift; sourceTree = "<group>"; };
+		D3F6CE821CF44B1E0004FCBF /* closeQuote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeQuote@2x.png"; sourceTree = "<group>"; };
+		D3F6CE831CF44B1E0004FCBF /* closeQuote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeQuote@3x.png"; sourceTree = "<group>"; };
+		D3F6CE841CF44B1E0004FCBF /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
+		D3F6CE851CF44B1E0004FCBF /* openQuote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openQuote@2x.png"; sourceTree = "<group>"; };
+		D3F6CE861CF44B1E0004FCBF /* openQuote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openQuote@3x.png"; sourceTree = "<group>"; };
+		D3F6CE881CF44B1E0004FCBF /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D3F6CE891CF44B1E0004FCBF /* ConfigurationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationConstants.swift; sourceTree = "<group>"; };
+		D3F6CE8A1CF44B1E0004FCBF /* ErrorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
+		D3F6CE8B1CF44B1E0004FCBF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		D3F6CE8C1CF44B1E0004FCBF /* JSONConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConstants.swift; sourceTree = "<group>"; };
+		D3F6CE8D1CF44B1E0004FCBF /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		D3F6CE8E1CF44B1E0004FCBF /* RegularExpressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressions.swift; sourceTree = "<group>"; };
+		D3F6CE8F1CF44B1E0004FCBF /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
+		D3F6CE911CF44B1E0004FCBF /* AFDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDateExtension.swift; sourceTree = "<group>"; };
+		D3F6CE921CF44B1E0004FCBF /* Array+MumsnetModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MumsnetModelObject.swift"; sourceTree = "<group>"; };
+		D3F6CE931CF44B1E0004FCBF /* NSAttributedString+MumsnetMarkdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+MumsnetMarkdown.swift"; sourceTree = "<group>"; };
+		D3F6CE941CF44B1E0004FCBF /* NSData+MumsnetAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+MumsnetAdditions.swift"; sourceTree = "<group>"; };
+		D3F6CE951CF44B1E0004FCBF /* NSDate+TimeChecking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+TimeChecking.swift"; sourceTree = "<group>"; };
+		D3F6CE961CF44B1E0004FCBF /* NSDateFormatter+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
+		D3F6CE971CF44B1E0004FCBF /* NSFileManager+DirectoryCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+DirectoryCreation.swift"; sourceTree = "<group>"; };
+		D3F6CE981CF44B1E0004FCBF /* NSJSONSerialization+FallbackEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSJSONSerialization+FallbackEncoding.swift"; sourceTree = "<group>"; };
+		D3F6CE991CF44B1E0004FCBF /* NSMutableString+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableString+Regex.swift"; sourceTree = "<group>"; };
+		D3F6CE9A1CF44B1E0004FCBF /* NSNotificationCenter+MumsnetNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+MumsnetNotifications.swift"; sourceTree = "<group>"; };
+		D3F6CE9B1CF44B1E0004FCBF /* NSURL+MumsnetURLParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+MumsnetURLParsing.swift"; sourceTree = "<group>"; };
+		D3F6CE9C1CF44B1E0004FCBF /* NSURLConnection+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLConnection+JSON.swift"; sourceTree = "<group>"; };
+		D3F6CE9D1CF44B1E0004FCBF /* NSURLRequest+MumsnetDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+MumsnetDefaults.swift"; sourceTree = "<group>"; };
+		D3F6CE9E1CF44B1E0004FCBF /* NSURLSession+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSession+JSON.swift"; sourceTree = "<group>"; };
+		D3F6CE9F1CF44B1E0004FCBF /* NSURLSessionConfiguration+MumsnetDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLSessionConfiguration+MumsnetDefaults.swift"; sourceTree = "<group>"; };
+		D3F6CEA01CF44B1E0004FCBF /* NSUserDefaults+MumsnetPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+MumsnetPreferences.swift"; sourceTree = "<group>"; };
+		D3F6CEA11CF44B1E0004FCBF /* String+MumsnetMarkdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MumsnetMarkdown.swift"; sourceTree = "<group>"; };
+		D3F6CEA21CF44B1E0004FCBF /* String+Trimming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Trimming.swift"; sourceTree = "<group>"; };
+		D3F6CEA31CF44B1E0004FCBF /* String+URLEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLEncoding.swift"; sourceTree = "<group>"; };
+		D3F6CEA41CF44B1E0004FCBF /* String+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		D3F6CEA51CF44B1E0004FCBF /* String+YouTube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+YouTube.swift"; sourceTree = "<group>"; };
+		D3F6CEA61CF44B1E0004FCBF /* UIFont+PreferredFontAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PreferredFontAdditions.swift"; sourceTree = "<group>"; };
+		D3F6CEA81CF44B1E0004FCBF /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES256CBC.swift; sourceTree = "<group>"; };
+		D3F6CEAA1CF44B1E0004FCBF /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		D3F6CEAB1CF44B1E0004FCBF /* EncryptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionManager.swift; sourceTree = "<group>"; };
+		D3F6CEAC1CF44B1E0004FCBF /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		D3F6CEAD1CF44B1E0004FCBF /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D3F6CEAF1CF44B1E0004FCBF /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D3F6CEB01CF44B1E0004FCBF /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D3F6CEB11CF44B1E0004FCBF /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
+		D3F6CEB21CF44B1E0004FCBF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		D3F6CEB31CF44B1E0004FCBF /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		D3F6CEB41CF44B1E0004FCBF /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
+		D3F6CEB51CF44B1E0004FCBF /* Newsletter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Newsletter.swift; sourceTree = "<group>"; };
+		D3F6CEB61CF44B1E0004FCBF /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D3F6CEB71CF44B1E0004FCBF /* RegistrationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
+		D3F6CEB81CF44B1E0004FCBF /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		D3F6CEB91CF44B1E0004FCBF /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		D3F6CEBA1CF44B1E0004FCBF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D3F6CEBC1CF44B1E0004FCBF /* TalkFramework-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TalkFramework-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3F6CEBE1CF44B1E0004FCBF /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		D3F6CEBF1CF44B1E0004FCBF /* MumsnetCustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumsnetCustomError.swift; sourceTree = "<group>"; };
+		D3F6CF071CF4602F0004FCBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FireBase/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3F6CF091CF461A90004FCBF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D3F6CF0B1CF461B40004FCBF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D3F6CF0D1CF461C50004FCBF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D3F6CF0F1CF461ED0004FCBF /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		D3F6CF111CF461FD0004FCBF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D3F6CF131CF4620E0004FCBF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D3F6CF151CF462130004FCBF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D3F6CF171CF462210004FCBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D3F6CF191CF462730004FCBF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D3F6CF1B1CF462E30004FCBF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D3F6CF1D1CF463110004FCBF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,11 +377,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F6CF1E1CF463110004FCBF /* libsqlite3.0.tbd in Frameworks */,
+				D3F6CF1C1CF462E30004FCBF /* libz.tbd in Frameworks */,
+				D3F6CF1A1CF462730004FCBF /* CoreBluetooth.framework in Frameworks */,
+				D3F6CF181CF462210004FCBF /* SystemConfiguration.framework in Frameworks */,
+				D3F6CF161CF462130004FCBF /* CFNetwork.framework in Frameworks */,
+				D3F6CF141CF4620E0004FCBF /* Security.framework in Frameworks */,
+				D3F6CF121CF461FD0004FCBF /* libc++.tbd in Frameworks */,
+				D3F6CF101CF461ED0004FCBF /* libicucore.tbd in Frameworks */,
+				D3F6CF0E1CF461C50004FCBF /* CoreTelephony.framework in Frameworks */,
+				D3F6CF0C1CF461B40004FCBF /* AddressBook.framework in Frameworks */,
+				D3F6CF0A1CF461A90004FCBF /* MessageUI.framework in Frameworks */,
+				D3F6CDAC1CF4442D0004FCBF /* GoogleInterchangeUtilities.framework in Frameworks */,
+				D3F6CDAD1CF4442D0004FCBF /* GoogleSymbolUtilities.framework in Frameworks */,
 				D33D66CC1CABCDF300364C53 /* UIKit.framework in Frameworks */,
 				D33D66CA1CABCB1100364C53 /* Foundation.framework in Frameworks */,
+				D3F6CDAB1CF4442D0004FCBF /* FirebaseInstanceID.framework in Frameworks */,
 				D37A9A491CB69BBB0002C4F0 /* Alamofire.framework in Frameworks */,
+				D3F6CDC91CF4442E0004FCBF /* FirebaseMessaging.framework in Frameworks */,
+				D3F6CDAA1CF4442D0004FCBF /* FirebaseAnalytics.framework in Frameworks */,
 				D3A6C6E31CBCF5D000A249E9 /* Chatto.framework in Frameworks */,
 				D3A6C6DF1CBCF5D000A249E9 /* ChattoAdditions.framework in Frameworks */,
+				D3F6CDAE1CF4442D0004FCBF /* GoogleUtilities.framework in Frameworks */,
+				D3F6CDCA1CF4442E0004FCBF /* GoogleIPhoneUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +415,6 @@
 			);
 			name = "Sending status";
 			path = "ChatDetail/Sending status";
-			sourceTree = "<group>";
-		};
-		D33D66001CABC9F200364C53 /* TalkFramework */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CBF1CBCF4B100384DEF /* API */,
-			);
-			name = TalkFramework;
 			sourceTree = "<group>";
 		};
 		D33D66CE1CABDCD200364C53 /* ChatList */ = {
@@ -390,7 +444,6 @@
 			children = (
 				D33E4E151CB8102C005ED0AC /* ReadableDate.swift */,
 				D37A9A4D1CB69CFB0002C4F0 /* Extenstions.swift */,
-				D33E4E201CB81477005ED0AC /* AFDateExtension.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -446,163 +499,6 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
-		D3A73CBF1CBCF4B100384DEF /* API */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CC01CBCF4B100384DEF /* API Wrapper */,
-				D3A73CD11CBCF4B100384DEF /* Assets */,
-				D3A73CDC1CBCF4B100384DEF /* Constants */,
-				D3A73CE51CBCF4B100384DEF /* Extensions */,
-				D3A73CFB1CBCF4B100384DEF /* Frameworks */,
-				D3A73DE11CBCF4B100384DEF /* Managers */,
-				D3A73DE61CBCF4B100384DEF /* Model classes */,
-				D3A73DF31CBCF4B200384DEF /* Supporting Files */,
-				D3A73DF51CBCF4B200384DEF /* Utilities */,
-			);
-			name = API;
-			path = ../../../../TalkFramework/TalkFramework/API;
-			sourceTree = "<group>";
-		};
-		D3A73CC01CBCF4B100384DEF /* API Wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CC11CBCF4B100384DEF /* APIRequest.swift */,
-				D3A73CC21CBCF4B100384DEF /* BookmarkedPaginatedAPIRequest.swift */,
-				D3A73CC31CBCF4B100384DEF /* EmoticonImageDownloader.swift */,
-				D3A73CC41CBCF4B100384DEF /* MumsnetData.swift */,
-				D3A73CC51CBCF4B100384DEF /* MumsnetDataCreate.swift */,
-				D3A73CC61CBCF4B100384DEF /* MumsnetDataDelete.swift */,
-				D3A73CC71CBCF4B100384DEF /* MumsnetPaginatedData.swift */,
-				D3A73CC81CBCF4B100384DEF /* PaginatedAPIRequest.swift */,
-				D3A73CC91CBCF4B100384DEF /* Protocols */,
-				D3A73CCF1CBCF4B100384DEF /* Registration.swift */,
-				D3A73CD01CBCF4B100384DEF /* TalkCache.swift */,
-			);
-			path = "API Wrapper";
-			sourceTree = "<group>";
-		};
-		D3A73CC91CBCF4B100384DEF /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CCA1CBCF4B100384DEF /* MumsnetDataCreating.swift */,
-				D3A73CCB1CBCF4B100384DEF /* MumsnetDataDeleting.swift */,
-				D3A73CCC1CBCF4B100384DEF /* MumsnetDataFlipping.swift */,
-				D3A73CCD1CBCF4B100384DEF /* MumsnetDataPaginating.swift */,
-				D3A73CCE1CBCF4B100384DEF /* MumsnetModelObjectLoading.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		D3A73CD11CBCF4B100384DEF /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CD21CBCF4B100384DEF /* closeQuote@2x.png */,
-				D3A73CD31CBCF4B100384DEF /* closeQuote@3x.png */,
-				D3A73CD41CBCF4B100384DEF /* icomoon.ttf */,
-				D3A73CD51CBCF4B100384DEF /* openQuote@2x.png */,
-				D3A73CD61CBCF4B100384DEF /* openQuote@3x.png */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		D3A73CDC1CBCF4B100384DEF /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CDD1CBCF4B100384DEF /* APIConstants.swift */,
-				D3A73CDE1CBCF4B100384DEF /* ConfigurationConstants.swift */,
-				D3A73CDF1CBCF4B100384DEF /* ErrorConstants.swift */,
-				D3A73CE01CBCF4B100384DEF /* Fonts.swift */,
-				D3A73CE11CBCF4B100384DEF /* JSONConstants.swift */,
-				D3A73CE21CBCF4B100384DEF /* Notifications.swift */,
-				D3A73CE31CBCF4B100384DEF /* RegularExpressions.swift */,
-				D3A73CE41CBCF4B100384DEF /* UserDefaultsConstants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		D3A73CE51CBCF4B100384DEF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CE61CBCF4B100384DEF /* Array+MumsnetModelObject.swift */,
-				D3A73CE71CBCF4B100384DEF /* NSAttributedString+MumsnetMarkdown.swift */,
-				D3A73CE81CBCF4B100384DEF /* NSData+MumsnetAdditions.swift */,
-				D3A73CE91CBCF4B100384DEF /* NSDate+TimeChecking.swift */,
-				D3A73CEA1CBCF4B100384DEF /* NSDateFormatter+ISO8601.swift */,
-				D3A73CEB1CBCF4B100384DEF /* NSFileManager+DirectoryCreation.swift */,
-				D3A73CEC1CBCF4B100384DEF /* NSJSONSerialization+FallbackEncoding.swift */,
-				D3A73CED1CBCF4B100384DEF /* NSMutableString+Regex.swift */,
-				D3A73CEE1CBCF4B100384DEF /* NSNotificationCenter+MumsnetNotifications.swift */,
-				D3A73CEF1CBCF4B100384DEF /* NSURL+MumsnetURLParsing.swift */,
-				D3A73CF01CBCF4B100384DEF /* NSURLConnection+JSON.swift */,
-				D3A73CF11CBCF4B100384DEF /* NSURLRequest+MumsnetDefaults.swift */,
-				D3A73CF21CBCF4B100384DEF /* NSURLSession+JSON.swift */,
-				D3A73CF31CBCF4B100384DEF /* NSURLSessionConfiguration+MumsnetDefaults.swift */,
-				D3A73CF41CBCF4B100384DEF /* NSUserDefaults+MumsnetPreferences.swift */,
-				D3A73CF51CBCF4B100384DEF /* String+MumsnetMarkdown.swift */,
-				D3A73CF61CBCF4B100384DEF /* String+Trimming.swift */,
-				D3A73CF71CBCF4B100384DEF /* String+URLEncoding.swift */,
-				D3A73CF81CBCF4B100384DEF /* String+Validation.swift */,
-				D3A73CF91CBCF4B100384DEF /* String+YouTube.swift */,
-				D3A73CFA1CBCF4B100384DEF /* UIFont+PreferredFontAdditions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D3A73CFB1CBCF4B100384DEF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73CFC1CBCF4B100384DEF /* AES256CBC.swift */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		D3A73DE11CBCF4B100384DEF /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73DE21CBCF4B100384DEF /* APIManager.swift */,
-				D3A73DE31CBCF4B100384DEF /* EncryptionManager.swift */,
-				D3A73DE41CBCF4B100384DEF /* FileManager.swift */,
-				D3A73DE51CBCF4B100384DEF /* UserManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		D3A73DE61CBCF4B100384DEF /* Model classes */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73DE71CBCF4B200384DEF /* APIError.swift */,
-				D3A73DE81CBCF4B200384DEF /* Category.swift */,
-				D3A73DE91CBCF4B200384DEF /* Emoticon.swift */,
-				D3A73DEA1CBCF4B200384DEF /* Error.swift */,
-				D3A73DEB1CBCF4B200384DEF /* Image.swift */,
-				D3A73DEC1CBCF4B200384DEF /* ModelObject.swift */,
-				D3A73DED1CBCF4B200384DEF /* Newsletter.swift */,
-				D3A73DEE1CBCF4B200384DEF /* Post.swift */,
-				D3A73DEF1CBCF4B200384DEF /* RegistrationError.swift */,
-				D3A73DF01CBCF4B200384DEF /* Thread.swift */,
-				D3A73DF11CBCF4B200384DEF /* Topic.swift */,
-				D3A73DF21CBCF4B200384DEF /* User.swift */,
-			);
-			path = "Model classes";
-			sourceTree = "<group>";
-		};
-		D3A73DF31CBCF4B200384DEF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73DF41CBCF4B200384DEF /* TalkFramework-Bridging-Header.h */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D3A73DF51CBCF4B200384DEF /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				D3A73DF61CBCF4B200384DEF /* GlobalFunctions.swift */,
-				D3A73DF71CBCF4B200384DEF /* MumsnetCustomError.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		D3F2C9721CAAE2BD003FA520 = {
 			isa = PBXGroup;
 			children = (
@@ -642,14 +538,229 @@
 		D3F2C9901CAAE387003FA520 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3F6CF1D1CF463110004FCBF /* libsqlite3.0.tbd */,
+				D3F6CF1B1CF462E30004FCBF /* libz.tbd */,
+				D3F6CF191CF462730004FCBF /* CoreBluetooth.framework */,
+				D3F6CF171CF462210004FCBF /* SystemConfiguration.framework */,
+				D3F6CF151CF462130004FCBF /* CFNetwork.framework */,
+				D3F6CF131CF4620E0004FCBF /* Security.framework */,
+				D3F6CF111CF461FD0004FCBF /* libc++.tbd */,
+				D3F6CF0F1CF461ED0004FCBF /* libicucore.tbd */,
+				D3F6CF0D1CF461C50004FCBF /* CoreTelephony.framework */,
+				D3F6CF0B1CF461B40004FCBF /* AddressBook.framework */,
+				D3F6CF091CF461A90004FCBF /* MessageUI.framework */,
+				D3F6CDD81CF44A170004FCBF /* TalkFramework */,
+				D3F6CD701CF443390004FCBF /* FireBase */,
 				D3A6C6D61CBCF5C400A249E9 /* ChattoAdditions.xcodeproj */,
 				D3A6C6CD1CBCF5B700A249E9 /* Chatto.xcodeproj */,
 				D33D66AC1CABCA2900364C53 /* Alamofire.xcodeproj */,
 				D33D66CB1CABCDF300364C53 /* UIKit.framework */,
 				D33D66C91CABCB1100364C53 /* Foundation.framework */,
-				D33D66001CABC9F200364C53 /* TalkFramework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3F6CD701CF443390004FCBF /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CF071CF4602F0004FCBF /* GoogleService-Info.plist */,
+				D3F6CD731CF4442D0004FCBF /* Analytics */,
+				D3F6CD8F1CF4442D0004FCBF /* Firebase.h */,
+				D3F6CD9D1CF4442D0004FCBF /* Messaging */,
+				D3F6CDA01CF4442D0004FCBF /* module.modulemap */,
+				D3F6CDA11CF4442D0004FCBF /* NOTICES */,
+				D3F6CDA21CF4442D0004FCBF /* README.md */,
+			);
+			name = FireBase;
+			sourceTree = "<group>";
+		};
+		D3F6CD731CF4442D0004FCBF /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CD741CF4442D0004FCBF /* FirebaseAnalytics.framework */,
+				D3F6CD751CF4442D0004FCBF /* FirebaseInstanceID.framework */,
+				D3F6CD761CF4442D0004FCBF /* GoogleInterchangeUtilities.framework */,
+				D3F6CD771CF4442D0004FCBF /* GoogleSymbolUtilities.framework */,
+				D3F6CD781CF4442D0004FCBF /* GoogleUtilities.framework */,
+			);
+			name = Analytics;
+			path = FireBase/Analytics;
+			sourceTree = "<group>";
+		};
+		D3F6CD9D1CF4442D0004FCBF /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CD9E1CF4442D0004FCBF /* FirebaseMessaging.framework */,
+				D3F6CD9F1CF4442D0004FCBF /* GoogleIPhoneUtilities.framework */,
+			);
+			name = Messaging;
+			path = FireBase/Messaging;
+			sourceTree = "<group>";
+		};
+		D3F6CDD81CF44A170004FCBF /* TalkFramework */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE6F1CF44B1E0004FCBF /* API */,
+			);
+			name = TalkFramework;
+			sourceTree = "<group>";
+		};
+		D3F6CE6F1CF44B1E0004FCBF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE701CF44B1E0004FCBF /* API Wrapper */,
+				D3F6CE811CF44B1E0004FCBF /* Assets */,
+				D3F6CE871CF44B1E0004FCBF /* Constants */,
+				D3F6CE901CF44B1E0004FCBF /* Extensions */,
+				D3F6CEA71CF44B1E0004FCBF /* Frameworks */,
+				D3F6CEA91CF44B1E0004FCBF /* Managers */,
+				D3F6CEAE1CF44B1E0004FCBF /* Model classes */,
+				D3F6CEBB1CF44B1E0004FCBF /* Supporting Files */,
+				D3F6CEBD1CF44B1E0004FCBF /* Utilities */,
+			);
+			name = API;
+			path = ../../../../TalkFramework/TalkFramework/API;
+			sourceTree = "<group>";
+		};
+		D3F6CE701CF44B1E0004FCBF /* API Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE711CF44B1E0004FCBF /* APIRequest.swift */,
+				D3F6CE721CF44B1E0004FCBF /* BookmarkedPaginatedAPIRequest.swift */,
+				D3F6CE731CF44B1E0004FCBF /* EmoticonImageDownloader.swift */,
+				D3F6CE741CF44B1E0004FCBF /* MumsnetData.swift */,
+				D3F6CE751CF44B1E0004FCBF /* MumsnetDataCreate.swift */,
+				D3F6CE761CF44B1E0004FCBF /* MumsnetDataDelete.swift */,
+				D3F6CE771CF44B1E0004FCBF /* MumsnetPaginatedData.swift */,
+				D3F6CE781CF44B1E0004FCBF /* PaginatedAPIRequest.swift */,
+				D3F6CE791CF44B1E0004FCBF /* Protocols */,
+				D3F6CE7F1CF44B1E0004FCBF /* Registration.swift */,
+				D3F6CE801CF44B1E0004FCBF /* TalkCache.swift */,
+			);
+			path = "API Wrapper";
+			sourceTree = "<group>";
+		};
+		D3F6CE791CF44B1E0004FCBF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE7A1CF44B1E0004FCBF /* MumsnetDataCreating.swift */,
+				D3F6CE7B1CF44B1E0004FCBF /* MumsnetDataDeleting.swift */,
+				D3F6CE7C1CF44B1E0004FCBF /* MumsnetDataFlipping.swift */,
+				D3F6CE7D1CF44B1E0004FCBF /* MumsnetDataPaginating.swift */,
+				D3F6CE7E1CF44B1E0004FCBF /* MumsnetModelObjectLoading.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D3F6CE811CF44B1E0004FCBF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE821CF44B1E0004FCBF /* closeQuote@2x.png */,
+				D3F6CE831CF44B1E0004FCBF /* closeQuote@3x.png */,
+				D3F6CE841CF44B1E0004FCBF /* icomoon.ttf */,
+				D3F6CE851CF44B1E0004FCBF /* openQuote@2x.png */,
+				D3F6CE861CF44B1E0004FCBF /* openQuote@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D3F6CE871CF44B1E0004FCBF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE881CF44B1E0004FCBF /* APIConstants.swift */,
+				D3F6CE891CF44B1E0004FCBF /* ConfigurationConstants.swift */,
+				D3F6CE8A1CF44B1E0004FCBF /* ErrorConstants.swift */,
+				D3F6CE8B1CF44B1E0004FCBF /* Fonts.swift */,
+				D3F6CE8C1CF44B1E0004FCBF /* JSONConstants.swift */,
+				D3F6CE8D1CF44B1E0004FCBF /* Notifications.swift */,
+				D3F6CE8E1CF44B1E0004FCBF /* RegularExpressions.swift */,
+				D3F6CE8F1CF44B1E0004FCBF /* UserDefaultsConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D3F6CE901CF44B1E0004FCBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CE911CF44B1E0004FCBF /* AFDateExtension.swift */,
+				D3F6CE921CF44B1E0004FCBF /* Array+MumsnetModelObject.swift */,
+				D3F6CE931CF44B1E0004FCBF /* NSAttributedString+MumsnetMarkdown.swift */,
+				D3F6CE941CF44B1E0004FCBF /* NSData+MumsnetAdditions.swift */,
+				D3F6CE951CF44B1E0004FCBF /* NSDate+TimeChecking.swift */,
+				D3F6CE961CF44B1E0004FCBF /* NSDateFormatter+ISO8601.swift */,
+				D3F6CE971CF44B1E0004FCBF /* NSFileManager+DirectoryCreation.swift */,
+				D3F6CE981CF44B1E0004FCBF /* NSJSONSerialization+FallbackEncoding.swift */,
+				D3F6CE991CF44B1E0004FCBF /* NSMutableString+Regex.swift */,
+				D3F6CE9A1CF44B1E0004FCBF /* NSNotificationCenter+MumsnetNotifications.swift */,
+				D3F6CE9B1CF44B1E0004FCBF /* NSURL+MumsnetURLParsing.swift */,
+				D3F6CE9C1CF44B1E0004FCBF /* NSURLConnection+JSON.swift */,
+				D3F6CE9D1CF44B1E0004FCBF /* NSURLRequest+MumsnetDefaults.swift */,
+				D3F6CE9E1CF44B1E0004FCBF /* NSURLSession+JSON.swift */,
+				D3F6CE9F1CF44B1E0004FCBF /* NSURLSessionConfiguration+MumsnetDefaults.swift */,
+				D3F6CEA01CF44B1E0004FCBF /* NSUserDefaults+MumsnetPreferences.swift */,
+				D3F6CEA11CF44B1E0004FCBF /* String+MumsnetMarkdown.swift */,
+				D3F6CEA21CF44B1E0004FCBF /* String+Trimming.swift */,
+				D3F6CEA31CF44B1E0004FCBF /* String+URLEncoding.swift */,
+				D3F6CEA41CF44B1E0004FCBF /* String+Validation.swift */,
+				D3F6CEA51CF44B1E0004FCBF /* String+YouTube.swift */,
+				D3F6CEA61CF44B1E0004FCBF /* UIFont+PreferredFontAdditions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3F6CEA71CF44B1E0004FCBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CEA81CF44B1E0004FCBF /* AES256CBC.swift */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3F6CEA91CF44B1E0004FCBF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CEAA1CF44B1E0004FCBF /* APIManager.swift */,
+				D3F6CEAB1CF44B1E0004FCBF /* EncryptionManager.swift */,
+				D3F6CEAC1CF44B1E0004FCBF /* FileManager.swift */,
+				D3F6CEAD1CF44B1E0004FCBF /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D3F6CEAE1CF44B1E0004FCBF /* Model classes */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CEAF1CF44B1E0004FCBF /* APIError.swift */,
+				D3F6CEB01CF44B1E0004FCBF /* Category.swift */,
+				D3F6CEB11CF44B1E0004FCBF /* Emoticon.swift */,
+				D3F6CEB21CF44B1E0004FCBF /* Error.swift */,
+				D3F6CEB31CF44B1E0004FCBF /* Image.swift */,
+				D3F6CEB41CF44B1E0004FCBF /* ModelObject.swift */,
+				D3F6CEB51CF44B1E0004FCBF /* Newsletter.swift */,
+				D3F6CEB61CF44B1E0004FCBF /* Post.swift */,
+				D3F6CEB71CF44B1E0004FCBF /* RegistrationError.swift */,
+				D3F6CEB81CF44B1E0004FCBF /* Thread.swift */,
+				D3F6CEB91CF44B1E0004FCBF /* Topic.swift */,
+				D3F6CEBA1CF44B1E0004FCBF /* User.swift */,
+			);
+			path = "Model classes";
+			sourceTree = "<group>";
+		};
+		D3F6CEBB1CF44B1E0004FCBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CEBC1CF44B1E0004FCBF /* TalkFramework-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3F6CEBD1CF44B1E0004FCBF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6CEBE1CF44B1E0004FCBF /* GlobalFunctions.swift */,
+				D3F6CEBF1CF44B1E0004FCBF /* MumsnetCustomError.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -809,15 +920,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F6CED11CF44B1E0004FCBF /* icomoon.ttf in Resources */,
+				D3F6CECF1CF44B1E0004FCBF /* closeQuote@2x.png in Resources */,
 				D3F2C9891CAAE2BE003FA520 /* LaunchScreen.storyboard in Resources */,
-				D3A73E091CBCF4B200384DEF /* icomoon.ttf in Resources */,
-				D3A73E071CBCF4B200384DEF /* closeQuote@2x.png in Resources */,
 				D3F2C9861CAAE2BE003FA520 /* Assets.xcassets in Resources */,
+				D3F6CED01CF44B1E0004FCBF /* closeQuote@3x.png in Resources */,
+				D3F6CED21CF44B1E0004FCBF /* openQuote@2x.png in Resources */,
 				D303EF8E1CAD71D80006130D /* SendingStatusCollectionViewCell.xib in Resources */,
-				D3A73E0A1CBCF4B200384DEF /* openQuote@2x.png in Resources */,
+				D3F6CDCB1CF4442E0004FCBF /* NOTICES in Resources */,
+				D3F6CF081CF4602F0004FCBF /* GoogleService-Info.plist in Resources */,
+				D3F6CED31CF44B1E0004FCBF /* openQuote@3x.png in Resources */,
 				D3F2C9841CAAE2BE003FA520 /* Main.storyboard in Resources */,
-				D3A73E081CBCF4B200384DEF /* closeQuote@3x.png in Resources */,
-				D3A73E0B1CBCF4B200384DEF /* openQuote@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,88 +941,89 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A73E151CBCF4B200384DEF /* Notifications.swift in Sources */,
-				D3A73E1D1CBCF4B200384DEF /* NSFileManager+DirectoryCreation.swift in Sources */,
+				D3F6CED91CF44B1E0004FCBF /* Notifications.swift in Sources */,
 				D33D66D31CABE00B00364C53 /* ChatListViewController.swift in Sources */,
-				D3A73E101CBCF4B200384DEF /* APIConstants.swift in Sources */,
-				D3A73E2A1CBCF4B200384DEF /* String+Validation.swift in Sources */,
-				D3A73E041CBCF4B200384DEF /* MumsnetModelObjectLoading.swift in Sources */,
-				D3A73EE51CBCF4B200384DEF /* GlobalFunctions.swift in Sources */,
-				D3A73E061CBCF4B200384DEF /* TalkCache.swift in Sources */,
-				D3A73E211CBCF4B200384DEF /* NSURL+MumsnetURLParsing.swift in Sources */,
+				D3F6CEDF1CF44B1F0004FCBF /* NSData+MumsnetAdditions.swift in Sources */,
+				D3F6CED41CF44B1E0004FCBF /* APIConstants.swift in Sources */,
+				D3F6CEEB1CF44B1F0004FCBF /* NSUserDefaults+MumsnetPreferences.swift in Sources */,
+				D3F6CEEE1CF44B1F0004FCBF /* String+URLEncoding.swift in Sources */,
+				D3F6CECD1CF44B1E0004FCBF /* Registration.swift in Sources */,
+				D3F6CEE21CF44B1F0004FCBF /* NSFileManager+DirectoryCreation.swift in Sources */,
 				D3A6C6ED1CBD345F00A249E9 /* APIManager+Chat.swift in Sources */,
-				D3A73DFC1CBCF4B200384DEF /* MumsnetDataCreate.swift in Sources */,
-				D3A73E021CBCF4B200384DEF /* MumsnetDataFlipping.swift in Sources */,
 				D3F2C9811CAAE2BE003FA520 /* ViewController.swift in Sources */,
-				D3A73EE01CBCF4B200384DEF /* Post.swift in Sources */,
-				D3A73E1E1CBCF4B200384DEF /* NSJSONSerialization+FallbackEncoding.swift in Sources */,
+				D3F6CEC71CF44B1E0004FCBF /* PaginatedAPIRequest.swift in Sources */,
+				D3F6CEFF1CF44B1F0004FCBF /* RegistrationError.swift in Sources */,
+				D3F6CEF11CF44B1F0004FCBF /* UIFont+PreferredFontAdditions.swift in Sources */,
+				D3F6CEFE1CF44B1F0004FCBF /* Post.swift in Sources */,
+				D3F6CEFA1CF44B1F0004FCBF /* Error.swift in Sources */,
+				D3F6CEE51CF44B1F0004FCBF /* NSNotificationCenter+MumsnetNotifications.swift in Sources */,
+				D3F6CEF71CF44B1F0004FCBF /* APIError.swift in Sources */,
+				D3F6CECA1CF44B1E0004FCBF /* MumsnetDataFlipping.swift in Sources */,
+				D3F6CF041CF44B1F0004FCBF /* MumsnetCustomError.swift in Sources */,
 				D3A6C6F01CBD345F00A249E9 /* MumsnetChatMessage.swift in Sources */,
 				D3A6C6EF1CBD345F00A249E9 /* MumsnetChat.swift in Sources */,
-				D3A73E221CBCF4B200384DEF /* NSURLConnection+JSON.swift in Sources */,
 				D303EF861CAD71640006130D /* SlidingDatasSource.swift in Sources */,
-				D3A73DFB1CBCF4B200384DEF /* MumsnetData.swift in Sources */,
+				D3F6CF011CF44B1F0004FCBF /* Topic.swift in Sources */,
+				D3F6CEF21CF44B1F0004FCBF /* AES256CBC.swift in Sources */,
 				D33D67021CAC09FE00364C53 /* ChatDataSource.swift in Sources */,
-				D3A73E231CBCF4B200384DEF /* NSURLRequest+MumsnetDefaults.swift in Sources */,
+				D3F6CECE1CF44B1E0004FCBF /* TalkCache.swift in Sources */,
+				D3F6CEE41CF44B1F0004FCBF /* NSMutableString+Regex.swift in Sources */,
+				D3F6CECC1CF44B1E0004FCBF /* MumsnetModelObjectLoading.swift in Sources */,
+				D3F6CEC31CF44B1E0004FCBF /* MumsnetData.swift in Sources */,
+				D3F6CEE11CF44B1F0004FCBF /* NSDateFormatter+ISO8601.swift in Sources */,
 				D303EF8D1CAD71D80006130D /* SendingStatusCollectionViewCell.swift in Sources */,
-				D3A73DFE1CBCF4B200384DEF /* MumsnetPaginatedData.swift in Sources */,
 				D303EF8F1CAD71D80006130D /* SendingStatusPresenter.swift in Sources */,
-				D3A73E1A1CBCF4B200384DEF /* NSData+MumsnetAdditions.swift in Sources */,
+				D3F6CED61CF44B1E0004FCBF /* ErrorConstants.swift in Sources */,
+				D3F6CEE91CF44B1F0004FCBF /* NSURLSession+JSON.swift in Sources */,
+				D3F6CEC91CF44B1E0004FCBF /* MumsnetDataDeleting.swift in Sources */,
+				D3F6CEFB1CF44B1F0004FCBF /* Image.swift in Sources */,
 				D37205461CB3A8CA00BC59C6 /* LoginViewController.swift in Sources */,
-				D3A73E271CBCF4B200384DEF /* String+MumsnetMarkdown.swift in Sources */,
-				D3A73E1F1CBCF4B200384DEF /* NSMutableString+Regex.swift in Sources */,
-				D3A73EDE1CBCF4B200384DEF /* ModelObject.swift in Sources */,
-				D3A73E121CBCF4B200384DEF /* ErrorConstants.swift in Sources */,
-				D3A73EDF1CBCF4B200384DEF /* Newsletter.swift in Sources */,
-				D3A73ED91CBCF4B200384DEF /* APIError.swift in Sources */,
-				D3A73EE31CBCF4B200384DEF /* Topic.swift in Sources */,
-				D3A73EDA1CBCF4B200384DEF /* Category.swift in Sources */,
+				D3F6CF031CF44B1F0004FCBF /* GlobalFunctions.swift in Sources */,
+				D3F6CEF91CF44B1F0004FCBF /* Emoticon.swift in Sources */,
+				D3F6CEF61CF44B1F0004FCBF /* UserManager.swift in Sources */,
 				D33D66D51CABEFD100364C53 /* ChatDetailViewController.swift in Sources */,
 				D33D67041CAC2CF400364C53 /* UserActionHandler.swift in Sources */,
-				D3A73E181CBCF4B200384DEF /* Array+MumsnetModelObject.swift in Sources */,
-				D3A73ED71CBCF4B200384DEF /* FileManager.swift in Sources */,
-				D3A73EE21CBCF4B200384DEF /* Thread.swift in Sources */,
-				D3A73ED61CBCF4B200384DEF /* EncryptionManager.swift in Sources */,
-				D3A73E001CBCF4B200384DEF /* MumsnetDataCreating.swift in Sources */,
-				D3A73E1B1CBCF4B200384DEF /* NSDate+TimeChecking.swift in Sources */,
-				D3A73E1C1CBCF4B200384DEF /* NSDateFormatter+ISO8601.swift in Sources */,
-				D3A73DFF1CBCF4B200384DEF /* PaginatedAPIRequest.swift in Sources */,
-				D3A73E111CBCF4B200384DEF /* ConfigurationConstants.swift in Sources */,
-				D3A73E261CBCF4B200384DEF /* NSUserDefaults+MumsnetPreferences.swift in Sources */,
-				D3A73EDD1CBCF4B200384DEF /* Image.swift in Sources */,
-				D3A73E051CBCF4B200384DEF /* Registration.swift in Sources */,
-				D3A73E241CBCF4B200384DEF /* NSURLSession+JSON.swift in Sources */,
-				D3A73E281CBCF4B200384DEF /* String+Trimming.swift in Sources */,
-				D3A73E161CBCF4B200384DEF /* RegularExpressions.swift in Sources */,
-				D3A73E2D1CBCF4B200384DEF /* AES256CBC.swift in Sources */,
-				D3A73E2C1CBCF4B200384DEF /* UIFont+PreferredFontAdditions.swift in Sources */,
-				D3A73E191CBCF4B200384DEF /* NSAttributedString+MumsnetMarkdown.swift in Sources */,
-				D3A73EDC1CBCF4B200384DEF /* Error.swift in Sources */,
-				D3A73E251CBCF4B200384DEF /* NSURLSessionConfiguration+MumsnetDefaults.swift in Sources */,
-				D3A73ED81CBCF4B200384DEF /* UserManager.swift in Sources */,
+				D3F6CEF81CF44B1F0004FCBF /* Category.swift in Sources */,
+				D3F6CEDC1CF44B1F0004FCBF /* AFDateExtension.swift in Sources */,
+				D3F6CED51CF44B1E0004FCBF /* ConfigurationConstants.swift in Sources */,
+				D3F6CEFD1CF44B1F0004FCBF /* Newsletter.swift in Sources */,
+				D3F6CEDD1CF44B1F0004FCBF /* Array+MumsnetModelObject.swift in Sources */,
+				D3F6CDCC1CF4442E0004FCBF /* README.md in Sources */,
+				D3F6CEDA1CF44B1F0004FCBF /* RegularExpressions.swift in Sources */,
+				D3F6CEF01CF44B1F0004FCBF /* String+YouTube.swift in Sources */,
+				D3F6CEC11CF44B1E0004FCBF /* BookmarkedPaginatedAPIRequest.swift in Sources */,
+				D3F6CEC81CF44B1E0004FCBF /* MumsnetDataCreating.swift in Sources */,
+				D3F6CEC51CF44B1E0004FCBF /* MumsnetDataDelete.swift in Sources */,
+				D3F6CEEC1CF44B1F0004FCBF /* String+MumsnetMarkdown.swift in Sources */,
+				D3F6CEC21CF44B1E0004FCBF /* EmoticonImageDownloader.swift in Sources */,
+				D3F6CEC61CF44B1E0004FCBF /* MumsnetPaginatedData.swift in Sources */,
+				D3F6CEE61CF44B1F0004FCBF /* NSURL+MumsnetURLParsing.swift in Sources */,
+				D3F6CEF41CF44B1F0004FCBF /* EncryptionManager.swift in Sources */,
 				D37A9A4E1CB69CFB0002C4F0 /* Extenstions.swift in Sources */,
-				D3A73ED51CBCF4B200384DEF /* APIManager.swift in Sources */,
-				D3A73EE61CBCF4B200384DEF /* MumsnetCustomError.swift in Sources */,
-				D3A73E291CBCF4B200384DEF /* String+URLEncoding.swift in Sources */,
-				D3A73E031CBCF4B200384DEF /* MumsnetDataPaginating.swift in Sources */,
-				D3A73EE41CBCF4B200384DEF /* User.swift in Sources */,
+				D3F6CEE01CF44B1F0004FCBF /* NSDate+TimeChecking.swift in Sources */,
+				D3F6CECB1CF44B1E0004FCBF /* MumsnetDataPaginating.swift in Sources */,
+				D3F6CF021CF44B1F0004FCBF /* User.swift in Sources */,
+				D3F6CEF31CF44B1F0004FCBF /* APIManager.swift in Sources */,
+				D3F6CEC41CF44B1E0004FCBF /* MumsnetDataCreate.swift in Sources */,
+				D3F6CEF51CF44B1F0004FCBF /* FileManager.swift in Sources */,
+				D3F6CEFC1CF44B1F0004FCBF /* ModelObject.swift in Sources */,
 				D3A6C6EE1CBD345F00A249E9 /* ChatCache.swift in Sources */,
-				D3A73DFA1CBCF4B200384DEF /* EmoticonImageDownloader.swift in Sources */,
-				D3A73DFD1CBCF4B200384DEF /* MumsnetDataDelete.swift in Sources */,
-				D3A73DF91CBCF4B200384DEF /* BookmarkedPaginatedAPIRequest.swift in Sources */,
 				D303EF821CAD70620006130D /* ChatItemsDecorator.swift in Sources */,
-				D33E4E211CB81477005ED0AC /* AFDateExtension.swift in Sources */,
+				D3F6CF001CF44B1F0004FCBF /* Thread.swift in Sources */,
+				D3F6CEE81CF44B1F0004FCBF /* NSURLRequest+MumsnetDefaults.swift in Sources */,
+				D3F6CEE71CF44B1F0004FCBF /* NSURLConnection+JSON.swift in Sources */,
 				D33D66D11CABDD1100364C53 /* ChatListCell.swift in Sources */,
+				D3F6CEEF1CF44B1F0004FCBF /* String+Validation.swift in Sources */,
+				D3F6CEDB1CF44B1F0004FCBF /* UserDefaultsConstants.swift in Sources */,
 				D3F2C97F1CAAE2BE003FA520 /* AppDelegate.swift in Sources */,
-				D3A73DF81CBCF4B200384DEF /* APIRequest.swift in Sources */,
-				D3A73EDB1CBCF4B200384DEF /* Emoticon.swift in Sources */,
-				D3A73E171CBCF4B200384DEF /* UserDefaultsConstants.swift in Sources */,
+				D3F6CEE31CF44B1F0004FCBF /* NSJSONSerialization+FallbackEncoding.swift in Sources */,
+				D3F6CEC01CF44B1E0004FCBF /* APIRequest.swift in Sources */,
+				D3F6CED71CF44B1E0004FCBF /* Fonts.swift in Sources */,
+				D3F6CED81CF44B1E0004FCBF /* JSONConstants.swift in Sources */,
+				D3F6CEDE1CF44B1F0004FCBF /* NSAttributedString+MumsnetMarkdown.swift in Sources */,
+				D3F6CEED1CF44B1F0004FCBF /* String+Trimming.swift in Sources */,
 				D33E4E161CB8102C005ED0AC /* ReadableDate.swift in Sources */,
-				D3A73E131CBCF4B200384DEF /* Fonts.swift in Sources */,
-				D3A73E2B1CBCF4B200384DEF /* String+YouTube.swift in Sources */,
-				D3A73EE11CBCF4B200384DEF /* RegistrationError.swift in Sources */,
-				D3A73E201CBCF4B200384DEF /* NSNotificationCenter+MumsnetNotifications.swift in Sources */,
-				D3A73E141CBCF4B200384DEF /* JSONConstants.swift in Sources */,
-				D3A73E011CBCF4B200384DEF /* MumsnetDataDeleting.swift in Sources */,
+				D3F6CEEA1CF44B1F0004FCBF /* NSURLSessionConfiguration+MumsnetDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,9 +1112,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/FireBase/AdMob",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Analytics",
+					"$(PROJECT_DIR)/Frameworks/FireBase/AppIndexing",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Auth",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Crash",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Database",
+					"$(PROJECT_DIR)/Frameworks/FireBase/DynamicLinks",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Invites",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Messaging",
+					"$(PROJECT_DIR)/Frameworks/FireBase/RemoteConfig",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Storage",
+				);
 				INFOPLIST_FILE = MumsnetChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumsnet.chatapp;
 				PRODUCT_NAME = Chat;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MumsnetChat/MumsnetChat-Bridging-Header.h";
@@ -1098,9 +1227,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/FireBase/AdMob",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Analytics",
+					"$(PROJECT_DIR)/Frameworks/FireBase/AppIndexing",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Auth",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Crash",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Database",
+					"$(PROJECT_DIR)/Frameworks/FireBase/DynamicLinks",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Invites",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Messaging",
+					"$(PROJECT_DIR)/Frameworks/FireBase/RemoteConfig",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Storage",
+				);
 				INFOPLIST_FILE = MumsnetChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumsnet.chatapp;
 				PRODUCT_NAME = Chat;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MumsnetChat/MumsnetChat-Bridging-Header.h";
@@ -1113,9 +1257,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/FireBase/AdMob",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Analytics",
+					"$(PROJECT_DIR)/Frameworks/FireBase/AppIndexing",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Auth",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Crash",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Database",
+					"$(PROJECT_DIR)/Frameworks/FireBase/DynamicLinks",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Invites",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Messaging",
+					"$(PROJECT_DIR)/Frameworks/FireBase/RemoteConfig",
+					"$(PROJECT_DIR)/Frameworks/FireBase/Storage",
+				);
 				INFOPLIST_FILE = MumsnetChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumsnet.chatapp;
 				PRODUCT_NAME = Chat;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MumsnetChat/MumsnetChat-Bridging-Header.h";
